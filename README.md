@@ -98,7 +98,7 @@ In this game of hidden allegiances, players take on fantasy roles with unique ab
 </tr>
 </table>
 
-## 𖤓 ┊ Game Flow
+## ˖°𓇼 ┊ Game Flow
 
 **✦ Introduction Phase**  
 Story gets introduced, 4 players input their names, and roles are automatically assigned to each player
@@ -117,7 +117,19 @@ Players debate and vote to eliminate one suspect
 - **Lovers/Friends Choice**: Special story line to choose peace or chaos  
 - **Destiny Draw**: High-stakes duel for cross-team final pairs
 
-## ✦ ┊ Destiny Draw Mechanics
+## 🎲 ┊ Destiny Draw Mechanics
+
+The final duel where players draw numbers (1-10) and choose whether to **KEEP** or **REDRAW**:
+
+| Scenario | Outcome |
+|----------|---------|
+| Both KEEP | Higher number wins 1 point |
+| Both REDRAW | Higher number wins 1 point |
+| Mixed + Redraw > Keep | Redrawer wins 2 points |
+| Mixed + Redraw < Keep | Keeper wins 2 points |
+| Mixed + Redraw = Keep | Keeper wins 1 point |
+
+*First to 5 points claims victory for their team*
 
 ## ✦ ┊ Project Structure
 
