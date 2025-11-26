@@ -100,6 +100,23 @@ In this game of hidden allegiances, players take on fantasy roles with unique ab
 
 ## 𖤓 ┊ Game Flow
 
+**✦ Introduction Phase**  
+Story gets introduced, 4 players input their names, and roles are automatically assigned to each player
+
+**✦ Night Phase**  
+Players use their unique abilities in secret
+
+**✦ Dawn Phase**  
+The host reveals who died during the night
+
+**✦ Voting Phase**  
+Players debate and vote to eliminate one suspect
+
+**✦ Final Scenarios**  
+- **Same Team Victory**: Immediate win if last two players share allegiance  
+- **Lovers/Friends Choice**: Special story line to choose peace or chaos  
+- **Destiny Draw**: High-stakes duel for cross-team final pairs
+
 ## ✦ ┊ Destiny Draw Mechanics
 
 ## ✦ ┊ Project Structure
