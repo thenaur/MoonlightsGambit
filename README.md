@@ -29,7 +29,7 @@ In this game of hidden allegiances, players take on fantasy roles with unique ab
 ## ✦ ┊ Contributors
 | Name     | Role         | GitHub Account            |
 | -------- | -------------|-------------------------- |
-| Abril, Rheigne Ysabel M. | role | ✦ [@rainrain_lili](https://github.com/rainrain_lili) | 
+| Abril, Rheigne Ysabel M. | role | ✦ [@rainrain-lili](https://github.com/rainrain-lili) | 
 | Bautista, Angelica Joy G. | role | ✦ [@AnicaJoy118](https://github.com/AnicaJoy118) | 
 | Estil, Susan Marie R. | role  | ✦ [@Susany787](https://github.com/Susany787) | 
 | Punzalan, Athena Ashley R. | role | ✦ [@thenaur](https://github.com/thenaur) | 
