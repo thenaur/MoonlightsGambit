@@ -140,12 +140,13 @@ The final duel where players draw numbers (1-10) and choose whether to **KEEP** 
 ## ✦ ┊ Sample Output
 
 ## ✦ ┊ Contributors
-| Name     | Role         | GitHub Account            |
-| -------- | -------------|-------------------------- |
-| Abril, Rheigne Ysabel M. | role | ✦ [@rainrain-lili](https://github.com/rainrain-lili) | 
-| Bautista, Angelica Joy G. | role | ✦ [@AnicaJoy118](https://github.com/AnicaJoy118) | 
-| Estil, Susan Marie R. | role  | ✦ [@Susany787](https://github.com/Susany787) | 
-| Punzalan, Athena Ashley R. | role | ✦ [@thenaur](https://github.com/thenaur) | 
+
+| Name | GitHub Account |
+|------|----------------|
+| Abril, Rheigne Ysabel M. | ✦ [@rainrain_lili](https://github.com/rainrain_lili) |
+| Bautista, Angelica Joy G. | ✦ [@AnicaJoy118](https://github.com/AnicaJoy118) |
+| Estil, Susan Marie R. | ✦ [@Susany787](https://github.com/Susany787) |
+| Punzalan, Athena Ashley R. | ✦ [@thenaur](https://github.com/thenaur) |
 
 ## ✦ ┊ Acknowledgement
 
