@@ -45,6 +45,14 @@ In this game of hidden allegiances, players take on fantasy roles with unique ab
 
 ## ✦ ┊ Features
 
+- **Four Unique Characters**: Each with special night abilities and compelling backstories
+- **Dynamic Game Phases**: Rotating night actions, dawn revelations, and voting sessions
+- **Tragic Romance System**: Special interactions between lovers Elara and Orion
+- **Friendship Mechanics**: Unique choices for childhood friends Calisto and Luna  
+- **Strategic Social Deduction**: Blend of role abilities and player deception
+- **Destiny Draw Duel**: Final confrontation mechanic with risk-reward decisions
+- **Immersive Storytelling**: Rich narrative with multiple endings based on player choices
+
 ## 𓍊𓋼𓍊𓋼𓍊 ┊ Characters & Teams
 
 ## 𖤓 ┊ Game Flow
