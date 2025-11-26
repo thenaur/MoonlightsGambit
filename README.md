@@ -45,7 +45,58 @@ In this game of hidden allegiances, players take on fantasy roles with unique ab
 
 ## ✦ ┊ Features
 
-## 𓍊𓋼𓍊𓋼𓍊 ┊ Characters & Teams
+## ☾₊‧⁺┊ Characters & Teams
+
+<table>
+<tr>
+    <th colspan="5" style="text-align: center;">✦ THE LOVERS ✦</th>
+</tr>
+<tr>
+    <th>Role</th>
+    <th>Character</th>
+    <th>Alignment</th>
+    <th>Quote</th>
+    <th>Night Action</th>
+</tr>
+<tr>
+    <td><strong>The Believer</strong></td>
+    <td><strong>♡ Elara</strong></td>
+    <td>Good Team</td>
+    <td><em>"Her faith shines brighter than the moon"</em></td>
+    <td>Bless players to protect them from harm</td>
+</tr>
+<tr>
+    <td><strong>The Reaper</strong></td>
+    <td><strong>♡ Orion</strong></td>
+    <td>Evil Team</td>
+    <td><em>"His touch brings silence to the night"</em></td>
+    <td>Eliminate one player each night</td>
+</tr>
+<tr>
+    <th colspan="5" style="text-align: center">✦ THE FRIENDS ✦</th>
+</tr>
+<tr>
+    <th>Role</th>
+    <th>Character</th>
+    <th>Alignment</th>
+    <th>Quote</th>
+    <th>Night Action</th>
+</tr>
+<tr>
+    <td><strong>The Seeker</strong></td>
+    <td><strong>✦ Calisto</strong></td>
+    <td>Good Team</td>
+    <td><em>"His intuition pierces through shadows"</em></td>
+    <td>Investigate players to discover their roles</td>
+</tr>
+<tr>
+    <td><strong>The Saboteur</strong></td>
+    <td><strong>✦ Luna</strong></td>
+    <td>Evil Team</td>
+    <td><em>"Her chaos disrupts the natural order"</em></td>
+    <td>Block another player's next action</td>
+</tr>
+</table>
 
 ## 𖤓 ┊ Game Flow
 
