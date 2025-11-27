@@ -25,11 +25,11 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠁⠉⠛⠛⠉⠉⠉⠉⠁⠉⠁⠁⠁⠉⠉⠉⠒⠉⠁⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
-<i>*“Souls bound by love and friendship… and secrets that could destroy everything.”*</i>
+<i>"Souls bound by love and friendship… and secrets that could destroy everything."</i>
 
 ˚　　　　✦　　　.　　. 　 ˚　.　　　　　 . ✦　　　 　˚　　　　 . ★⋆. ࿐࿔ 
 　　　.   　　˚　　 　　*　　 　　✦　　　.　　.　　　✦　˚ 　　　　 ˚　.˚　　　　✦　　　.　　. 　 ˚　.　　　　 　　 　　　　        ੈ✧˳·˖✶   ✦　　
-
+    
 **CS2103**  
 Abril, Rheigne Ysabel M.<br/>
 Bautista, Angelica Joy G. <br/>
@@ -43,7 +43,7 @@ Punzalan, Athena Ashley R.
 
 In this game of hidden allegiances, players take on fantasy roles with unique abilities, all while concealing their true intentions. Will love survive duty? Will friendship endure betrayal? The masks are on... let the tragedy unfold.
 
-## ✦ ┊ Features
+## ‧₊˚ ☾. ⋅ ┊ Features
 
 1. **Four-player hidden-role setup**  
    - Random, unique assignment of Believer, Reaper, Seeker, Saboteur.  
@@ -90,7 +90,7 @@ In this game of hidden allegiances, players take on fantasy roles with unique ab
 10. **Replayability**  
     - Roles shuffled every run; identical player names allowed across sessions.
 
-## ☾₊‧⁺┊ Characters & Teams
+## ☾₊‧⁺ ┊ Characters & Teams
 
 <table>
 <tr>
@@ -162,9 +162,10 @@ Players debate and vote to eliminate one suspect
 - **Lovers/Friends Choice**: Special story line to choose peace or chaos  
 - **Destiny Draw**: High-stakes duel for cross-team final pairs
 
-## 🎲 ┊ Destiny Draw Mechanics
+### 🀥🀣🀦🀧🀨 ┊ Destiny Draw Mechanics
 
-The final duel where players draw numbers (1-10) and choose whether to **KEEP** or **REDRAW**:
+The final duel where players draw numbers (1-10) and choose to **KEEP** or **REDRAW**: <br/>
+*First to 5 points claims victory for their team*
 
 | Scenario | Outcome |
 |----------|---------|
@@ -174,27 +175,74 @@ The final duel where players draw numbers (1-10) and choose whether to **KEEP** 
 | Mixed + Redraw < Keep | Keeper wins 2 points |
 | Mixed + Redraw = Keep | Keeper wins 1 point |
 
-*First to 5 points claims victory for their team*
+## 𓍢ִ໋🀦 ┊ Project Structure
+```
+moonlightsgambit/
+├── enums/
+│   └── Team.java                   – GOOD / EVIL constants
+├── interfaces/
+│   └── GamePhase.java              – contract for all phase classes
+├── characters/
+│   ├── GameCharacter.java          – abstract base (name, team, alive, actions)
+│   ├── Elara.java                  – Believer (bless/protect)
+│   ├── Orion.java                  – Reaper (hunt/kill)
+│   ├── Calisto.java                – Seeker (investigate role)
+│   └── Luna.java                   – Saboteur (block next action)
+├── utils/
+│   ├── GameUtils.java              – console helpers (clear, type-writer, no invalid inputs)
+│   └── DestinyDraw.java            – final-duel logic & score tracking
+├── phases/
+│   ├── IntroPhase.java             – story blurb
+│   ├── GameSetup.java              – name input + role assignment
+│   ├── MoonPhase.java              – night actions (bless, hunt, investigate, sabotage)
+│   ├── DawnPhase.java              – death and survival announcements
+│   ├── VotingPhase.java            – elimination vote + final-two routing
+│   └── NarrativeEnding.java        – victory epilogues & special-ending texts
+├── MoonlightsGambit.java           – game loop & state
+└── MoonlightsGambitGame.java       – entry point
+```
 
-## ✦ ┊ Project Structure
+## ✦ ┊ OOP Principles
 
-## ✦ ┊ OOP Principles Applied
 
 ## ✦ ┊ How to Run the Program
 
+**Compilation**
+```bash
+placeholder
+```
 ## ✦ ┊ Sample Output
 
-## ✦ ┊ Contributors
+## ⋆⭒˚𖠋𖠋𖠋𖠋*.⋆ ┊ Contributors
+<div align="center">⠀⠀⠀
+<table>
+<tr>
+    <th>Name</th>
+    <th>GitHub Account</th>
+</tr>
+<tr>
+    <td>Abril, Rheigne Ysabel M.</td>
+    <td>✦ <a href="https://github.com/rainrain_lili">@rainrain_lili</a></td>
+</tr>
+<tr>
+    <td>Bautista, Angelica Joy G.</td>
+    <td>✦ <a href="https://github.com/AnicaJoy118">@AnicaJoy118</a></td>
+</tr>
+<tr>
+    <td>Estil, Susan Marie R.</td>
+    <td>✦ <a href="https://github.com/Susany787">@Susany787</a></td>
+</tr>
+<tr>
+    <td>Punzalan, Athena Ashley R.</td>
+    <td>✦ <a href="https://github.com/thenaur">@thenaur</a></td>
+</tr>
+</table>
 
-| Name | GitHub Account |
-|------|----------------|
-| Abril, Rheigne Ysabel M. | ✦ [@rainrain_lili](https://github.com/rainrain_lili) |
-| Bautista, Angelica Joy G. | ✦ [@AnicaJoy118](https://github.com/AnicaJoy118) |
-| Estil, Susan Marie R. | ✦ [@Susany787](https://github.com/Susany787) |
-| Punzalan, Athena Ashley R. | ✦ [@thenaur](https://github.com/thenaur) |
+*"Moonlight's Gambit represents the peak of our team's collective dedication. Every member contributed to both programming and design, participating in the project's development from the initial concept to final implementation. This collaborative spirit brought our vision for Artemia Academy to life."*
+</div>
 
-## ✦ ┊ Acknowledgement
+## જ⁀➴ ♡ ┊ Acknowledgement
+*"Our deepest appreciation goes to our instructor, Ma'am Fatima, for her mentorship in object-oriented programming, and to our peers for creating an environment of collaboration and growth. Thank you for being part of our development journey."*
 
-
-
+---
 *☪︎ ִ ֶ֢࣪⋆ THE END ⋆࿔࿐ ...or is it merely the beginning?*
