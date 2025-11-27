@@ -39,9 +39,11 @@ Punzalan, Athena Ashley R.
 </div>
 
 ## ‧₊˚ ~ Overview
-**Moonlight's Gambit** is a 4-player social deduction game set in the ancient academy of Artemia, where players discover hidden loyalties through magical mechanics and tragic romance. Souls bound by love and friendship must navigate secrets that could destroy everything they hold dear.
+<div align="justify">
+<strong>Moonlight's Gambit</strong> is a 4-player social deduction game set in the ancient academy of Artemia, where players discover hidden loyalties through magical mechanics and tragic romance. Souls bound by love and friendship must navigate secrets that could destroy everything they hold dear.<br/><br/>
 
 In this game of hidden allegiances, players take on fantasy roles with unique abilities, all while concealing their true intentions. Will love survive duty? Will friendship endure betrayal? The masks are on... let the tragedy unfold.
+</div>
 
 ## ˗ˏˋ ★ ˎˊ˗ ~ Features
 
@@ -178,29 +180,30 @@ moonlightsgambit/
 ```
 
 ## *ੈ✩‧₊˚ ~ OOP Principles
+<div align="justify">
+            
+✦ <strong>Encapsulation</strong><br/>
+⠀All character fields (name, team, alive, abilityBlocked, isBlessed) are private with <strong>getters/setters</strong>.<br/>
+⠀Night-action state (hunt, protect, sabotage) is held inside each subclass and accessed only through the public <code>performAction()</code> contract.
 
-✦ **Encapsulation**<br/>
-All character fields (name, team, alive, abilityBlocked, isBlessed) are private with **getters/setters**.
-Night-action state (hunt, protect, sabotage) is held inside each subclass and accessed only through the public `performAction()` contract.
+✦ <strong>Abstraction</strong><br/>
+⠀GamePhase interface abstracts <strong>Intro, Setup, Moon, Dawn, Voting phases</strong>; each implements <code>executePhase(MoonlightsGambit)</code> and <code>getPhaseName()</code>.<br/>
+⠀Low-level console operations (clear-screen, type-writer effect, safe-input loops) are hidden inside <code>GameUtils</code>.
 
-✦ **Abstraction**<br/>
-GamePhase interface abstracts **Intro, Setup, Moon, Dawn, Voting phases**; each implements `executePhase(MoonlightsGambit)` and `getPhaseName()`.
-Low-level console operations (clear-screen, type-writer effect, safe-input loops) are hidden inside `GameUtils`.
+✦ <strong>Inheritance</strong><br/>
+⠀Abstract <code>GameCharacter</code> is the <strong>super-class</strong>; four concrete roles (<code>Elara</code>, <code>Orion</code>, <code>Calisto</code>, <code>Luna</code>) <strong>extend</strong> it and <strong>override</strong> the abstract methods <code>performAction</code>, <code>getRoleDescription</code>, <code>getLoreDescription</code>, etc. The game loop stores all players in a single <code>GameCharacter[]</code> while still accessing <strong>role-specific behaviour</strong> through the common interface.
 
-✦ **Inheritance**<br/>
-Abstract `GameCharacter` is the **super-class**; four concrete roles (`Elara`, `Orion`, `Calisto`, `Luna`) **extend** it and **override** the abstract methods `performAction`, `getRoleDescription`, `getLoreDescription`, etc.  
-The game loop stores all players in a single `GameCharacter[]` while still accessing **role-specific behaviour** through the common interface.
+✦ <strong>Polymorphism</strong><br/>
+⠀The call <code>player.performAction(target, game)</code> dynamically dispatches to the correct subclass implementation at runtime:<br/>
+<code>Elara</code> → bless / protect<br/>
+<code>Orion</code> → hunt / kill<br/>
+<code>Calisto</code> → investigate role<br/>
+<code>Luna</code> → sabotage / block
 
-✦ **Polymorphism**<br/>
-The call `player.performAction(target, game)` dynamically dispatches to the correct subclass implementation at runtime:
-`Elara` → bless / protect
-`Orion` → hunt / kill
-`Calisto` → investigate role
-`Luna` → sabotage / block
-
-✦ **Exception Handling**<br/>
-`GameUtils.safeReadInt` wraps `Integer.parseInt` in a try-catch loop that traps `NumberFormatException` and re-prompts until the user enters a valid integer within range.
-Additional try-catch blocks in `clearScreen()` and `typeText()` handle IOException / InterruptedException for runtime faults, preventing the program from crashing if the native clear-command fails or the sleep is interrupted.
+✦ <strong>Exception Handling</strong><br/>
+⠀<code>GameUtils.safeReadInt</code> wraps <code>Integer.parseInt</code> in a try-catch loop that traps <code>NumberFormatException</code> and re-prompts until the user enters a valid integer within range.<br/>
+⠀Additional try-catch blocks in <code>clearScreen()</code> and <code>typeText()</code> handle IOException / InterruptedException for runtime faults, preventing the program from crashing if the native clear-command fails or the sleep is interrupted.
+</div>
 
 ##  ִ ࣪𖤐~ How to Run the Program
 1. **Download the ZIP File** of Moonlight's Gambit from the repository.
@@ -218,7 +221,7 @@ Additional try-catch blocks in `clearScreen()` and `typeText()` handle IOExcepti
 <div align="center">⠀⠀⠀
 <table>
 <tr>
-    <th>Name</th>
+    <th>Members</th>
     <th>GitHub Account</th>
 </tr>
 <tr>
@@ -244,7 +247,7 @@ Additional try-catch blocks in `clearScreen()` and `typeText()` handle IOExcepti
 
 ## જ⁀➴ ♡ ~ Acknowledgement
 <div align="justify">⠀
-"Our deepest appreciation goes to our instructor, Ma'am Fatima, for her mentorship in object-oriented programming, and to our peers for creating an environment of collaboration and growth. Thank you for being part of our development journey."
+"Our deepest appreciation goes to our instructor, <i>Ma'am Fatima</i>, for her mentorship in object-oriented programming, and to our peers for creating an environment of collaboration and growth. Thank you for being part of our development journey."
 </div>
 
 ***
