@@ -149,7 +149,7 @@ The final duel where the last two players alive draw numbers (1-10) and choose t
     <td>Keeper wins 1 point</td>
 </tr>
 </table>
-<i>First to get more than 5 points claims victory for their team</i>
+<i>First to get to 5 points claims victory for their team</i>
 </div>
 
 ## 𓍢ִ໋🀦 ~ Project Structure
