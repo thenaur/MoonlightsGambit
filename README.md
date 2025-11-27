@@ -45,6 +45,51 @@ In this game of hidden allegiances, players take on fantasy roles with unique ab
 
 ## ✦ ┊ Features
 
+1. **Four-player hidden-role setup**  
+   - Random, unique assignment of Believer, Reaper, Seeker, Saboteur.  
+   - Private role reveal with lore blurb and team allegiance.
+
+2. **Night-phase ability system**  
+   - Believer: bless/protect (can self-target).  
+   - Reaper: hunt/kill (blocked if target is blessed).  
+   - Seeker: investigate (learns exact role name).  
+   - Saboteur: block next-round ability of chosen player.  
+   - All actions are input-validated; sabotaged players are notified.
+
+3. **Dawn-phase resolution**  
+   - Host announces death or “no death”.
+   - Survivor list printed after every dawn.
+
+4. **Day-phase elimination vote**  
+   - Living players cast one vote each (no self-voting).  
+   - Tie = no elimination; majority = banishment.  
+   - Vote counts displayed publicly.
+
+5. **Automatic win detection**  
+   - Early win if one team is completely eliminated.  
+   - Early win if only two players of the same team remain.
+
+6. **Final-two special endings (branching narrative)**  
+   - Lovers (Elara + Orion) or Friends (Calisto + Luna) choose “Peace” or “Chaos”.  
+   - Mutual peace triggers joint victory and unique epilogue.  
+   - Any other pair proceeds to Destiny Draw duel.
+
+7. **Destiny Draw duel mini-game**  
+   - First to 5 points; simultaneous keep/redraw decisions.  
+   - Pay-off matrix exactly as spec (keeper vs re-drawer earns 2 pts on upset, 1 pt on tie).  
+   - Live scoreboard each round.
+
+8. **Type-writer narrative & clear-screen immersion**  
+   - All story text prints with adjustable character delay.  
+   - Cross-platform screen-clear (falls back to blank lines if native command fails).
+
+9. **Bullet-proof console input**  
+   - Non-blocking retry on empty, non-numeric, or out-of-range entries.  
+   - Press-enter prompts prevent text spill.
+
+10. **Replayability**  
+    - Roles shuffled every run; identical player names allowed across sessions.
+
 ## ☾₊‧⁺┊ Characters & Teams
 
 <table>
