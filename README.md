@@ -226,7 +226,7 @@ moonlightsgambit/
 </tr>
 <tr>
     <td>Abril, Rheigne Ysabel M.</td>
-    <td>✦ <a href="https://github.com/rainrain_lili">@rainrain_lili</a></td>
+    <td>✦ <a href="https://github.com/rainrain-lili">@rainrain_lili</a></td>
 </tr>
 <tr>
     <td>Bautista, Angelica Joy G.</td>
