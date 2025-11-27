@@ -1,5 +1,5 @@
 <div align="center">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡜⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⣤⠤⢀⠀⠀⠀⠀⠀⠀⠐⠒⠒⠒⠶⠮⣅⣿⠛⠶⠖⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -98,33 +98,26 @@ In this game of hidden allegiances, players take on fantasy roles with unique ab
 </tr>
 </table>
 
-☾・───────────────────────────────────────────────────────────────・☽
+☾・──────────────────────────────────────────────────────────・☽
 </div>
 
 **˖°𓇼 ~ Game Flow**
 
-1. **✦ Introduction Phase**  
-            Story gets introduced, 4 players input their names, and roles are randomly assigned to each player
-
-2. **✦ Night Phase**  
-            Players use their unique abilities in secret
-
-3. **✦ Dawn Phase**  
-            The host reveals who died during the night
-
-4. **✦ Voting Phase**  
-            Players debate and vote to eliminate one suspect
+1. **✦ Introduction Phase** ~ Story gets introduced, 4 players input their names, and roles are randomly assigned to each player
+2. **✦ Night Phase** ~ Players use their unique abilities in secret
+3. **✦ Dawn Phase** ~ The host reveals what happened during the night.
+4. **✦ Voting Phase** ~ Players debate and vote to eliminate one suspect
    
-<div align="center">☾・────────────────────────────────────────────────────────────────・☽</div>
+<div align="center">☾・───────────────────────────────────────────────────────────・☽</div>
 
 **⚝ ~ Final Scenarios**  
 - **Same Team Victory**: Immediate win if last two players share allegiance  
 - **Lovers/Friends Choice**: Special story line to choose peace or chaos  
 - **Destiny Draw**: High-stakes duel for cross-team final pairs
 
-<div align="center">☾・────────────────────────────────────────────────────────────────・☽</div>
+<div align="center">☾・───────────────────────────────────────────────────────────・☽</div>
 
-**🀥🀣🀦🀧🀨 ~ Destiny Draw Mechanics**
+**🀥🀣🀦🀧🀨 ~ Destiny Draw Mechanics** <br/>
 The final duel where the last two players alive draw numbers (1-10) and choose to **KEEP** or **REDRAW**: <br/>
 
 <div align="center">
@@ -135,11 +128,11 @@ The final duel where the last two players alive draw numbers (1-10) and choose t
 </tr>
 <tr>
     <td>Both KEEP</td>
-    <td>Higher number wins 1 point</td>
+    <td>Higher number wins 1 point<br>Same number: No points</td>
 </tr>
 <tr>
     <td>Both REDRAW</td>
-    <td>Higher number wins 1 point</td>
+    <td>Higher number wins 1 point<br>Same number: No points</td>
 </tr>
 <tr>
     <td>Mixed + Redraw > Keep</td>
@@ -154,7 +147,7 @@ The final duel where the last two players alive draw numbers (1-10) and choose t
     <td>Keeper wins 1 point</td>
 </tr>
 </table>
-<i>First to 5 points claims victory for their team</i>
+<i>First to get more than 5 points claims victory for their team</i>
 </div>
 
 ## 𓍢ִ໋🀦 ~ Project Structure
@@ -163,28 +156,51 @@ moonlightsgambit/
 ├── enums/
 │   └── Team.java                   – GOOD / EVIL constants
 ├── interfaces/
-│   └── GamePhase.java              – contract for all phase classes
+│   └── GamePhase.java              – contract implemented by every phase (execute, getName)
 ├── characters/
-│   ├── GameCharacter.java          – abstract base (name, team, alive, actions)
-│   ├── Elara.java                  – Believer (bless/protect)
-│   ├── Orion.java                  – Reaper (hunt/kill)
+│   ├── GameCharacter.java          – abstract base (name, team, alive, bless, block) + validation
+│   ├── Elara.java                  – Believer (bless / protect target)
+│   ├── Orion.java                  – Reaper (hunt / kill target)
 │   ├── Calisto.java                – Seeker (investigate role)
-│   └── Luna.java                   – Saboteur (block next action)
+│   └── Luna.java                   – Saboteur (block ability next round)
 ├── utils/
-│   ├── GameUtils.java              – console helpers (clear, type-writer, no invalid inputs)
-│   └── DestinyDraw.java            – final-duel logic & score tracking
+│   ├── GameUtils.java              – console helpers: clear-screen, type-writer, safe input
+│   └── DestinyDraw.java            – final-duel mini-game (keep/redraw cards)
 ├── phases/
-│   ├── IntroPhase.java             – story introduction
-│   ├── GameSetup.java              – name input + role assignment
-│   ├── MoonPhase.java              – night actions (bless, hunt, investigate, sabotage)
-│   ├── DawnPhase.java              – death and survival announcements
-│   ├── VotingPhase.java            – elimination vote + final-two routing
-│   └── NarrativeEnding.java        – victory epilogues & special-ending texts
-├── MoonlightsGambit.java           – game loop & state
-└── MoonlightsGambitGame.java       – entry point
+│   ├── IntroPhase.java             – title card + lore blurb
+│   ├── GameSetup.java              – player names, random role assignment
+│   ├── MoonPhase.java              – night actions: bless, hunt, investigate, sabotage
+│   ├── DawnPhase.java              – announce what happened in moonphase
+│   ├── VotingPhase.java            – majority vote to eliminate + final-two routing
+│   └── NarrativeEnding.java        – epilogue, and special ending texts
+├── MoonlightsGambit.java           – game loop, phase driver, win checks, state clean-up
+└── MoonlightsGambitGame.java       – main method: session loop, crash recovery, play-again 
 ```
 
 ## *ੈ✩‧₊˚ ~ OOP Principles
+
+✦ **Encapsulation**<br/>
+All character fields (name, team, alive, abilityBlocked, isBlessed) are private with **getters/setters**.
+Night-action state (hunt, protect, sabotage) is held inside each subclass and accessed only through the public `performAction()` contract.
+
+✦ **Abstraction**<br/>
+GamePhase interface abstracts **Intro, Setup, Moon, Dawn, Voting phases**; each implements `executePhase(MoonlightsGambit)` and `getPhaseName()`.
+Low-level console operations (clear-screen, type-writer effect, safe-input loops) are hidden inside `GameUtils`.
+
+✦ **Inheritance**<br/>
+Abstract `GameCharacter` is the **super-class**; four concrete roles (`Elara`, `Orion`, `Calisto`, `Luna`) **extend** it and **override** the abstract methods `performAction`, `getRoleDescription`, `getLoreDescription`, etc.  
+The game loop stores all players in a single `GameCharacter[]` while still accessing **role-specific behaviour** through the common interface.
+
+✦ **Polymorphism**<br/>
+The call `player.performAction(target, game)` dynamically dispatches to the correct subclass implementation at runtime:
+`Elara` → bless / protect
+`Orion` → hunt / kill
+`Calisto` → investigate role
+`Luna` → sabotage / block
+
+✦ **Exception Handling**<br/>
+`GameUtils.safeReadInt` wraps `Integer.parseInt` in a try-catch loop that traps `NumberFormatException` and re-prompts until the user enters a valid integer within range.
+Additional try-catch blocks in `clearScreen()` and `typeText()` handle IOException / InterruptedException for runtime faults, preventing the program from crashing if the native clear-command fails or the sleep is interrupted.
 
 ##  ִ ࣪𖤐~ How to Run the Program
 1. **Download the ZIP File** of Moonlight's Gambit from the repository.
