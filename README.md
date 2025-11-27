@@ -192,7 +192,7 @@ moonlightsgambit/
 │   ├── GameUtils.java              – console helpers (clear, type-writer, no invalid inputs)
 │   └── DestinyDraw.java            – final-duel logic & score tracking
 ├── phases/
-│   ├── IntroPhase.java             – story blurb
+│   ├── IntroPhase.java             – story introduction
 │   ├── GameSetup.java              – name input + role assignment
 │   ├── MoonPhase.java              – night actions (bless, hunt, investigate, sabotage)
 │   ├── DawnPhase.java              – death and survival announcements
