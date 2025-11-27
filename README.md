@@ -155,28 +155,55 @@ The final duel where the last two players alive draw numbers (1-10) and choose t
 ## 𓍢ִ໋🀦 ~ Project Structure
 ```
 moonlightsgambit/
-├── enums/
-│   └── Team.java                   – GOOD / EVIL constants
-├── interfaces/
-│   └── GamePhase.java              – contract implemented by every phase (execute, getName)
-├── characters/
-│   ├── GameCharacter.java          – abstract base (name, team, alive, bless, block) + validation
-│   ├── Elara.java                  – Believer (bless / protect target)
-│   ├── Orion.java                  – Reaper (hunt / kill target)
-│   ├── Calisto.java                – Seeker (investigate role)
-│   └── Luna.java                   – Saboteur (block ability next round)
-├── utils/
-│   ├── GameUtils.java              – console helpers: clear-screen, type-writer, safe input
-│   └── DestinyDraw.java            – final-duel mini-game (keep/redraw cards)
-├── phases/
-│   ├── IntroPhase.java             – title card + lore blurb
-│   ├── GameSetup.java              – player names, random role assignment
-│   ├── MoonPhase.java              – night actions: bless, hunt, investigate, sabotage
-│   ├── DawnPhase.java              – announce what happened in moonphase
-│   ├── VotingPhase.java            – majority vote to eliminate + final-two routing
-│   └── NarrativeEnding.java        – epilogue, and special ending texts
-├── MoonlightsGambit.java           – game loop, phase driver, win checks, state clean-up
-└── MoonlightsGambitGame.java       – main method: session loop, crash recovery, play-again 
+├── src/
+|   ├── enums/
+│   │     └── Team.java                   – GOOD / EVIL constants
+│   ├── interfaces/
+│   │     └── GamePhase.java              – contract implemented by every phase (execute, getName)
+│   ├── characters/
+│   │     ├── GameCharacter.java          – abstract base (name, team, alive, bless, block) + validation
+│   │     ├── Elara.java                  – Believer (bless / protect target)
+│   │     ├── Orion.java                  – Reaper (hunt / kill target)
+│   │     ├── Calisto.java                – Seeker (investigate role)
+│   │     └── Luna.java                   – Saboteur (block ability next round)
+│   ├── utils/
+│   │     ├── GameUtils.java              – console helpers: clear-screen, type-writer, safe input
+│   │     └── DestinyDraw.java            – final-duel mini-game (keep/redraw cards)
+│   ├── phases/
+│   │     ├── IntroPhase.java             – title card + lore blurb
+│   │     ├── GameSetup.java              – player names, random role assignment
+│   │     ├── MoonPhase.java              – night actions: bless, hunt, investigate, sabotage
+│   │     ├── DawnPhase.java              – announce what happened in moonphase
+│   │     ├── VotingPhase.java            – majority vote to eliminate + final-two routing
+│   │     └── NarrativeEnding.java        – epilogue, and special ending texts
+|   ├── MoonlightsGambit.java           – game loop, phase driver, win checks, state clean-up
+|   └── MoonlightsGambitGame.java       – main method: session loop, crash recovery, play-again
+|
+├── bin/
+|   ├── enums/
+│   │     └── Team.class                   
+│   ├── interfaces/
+│   │     └── GamePhase.class             
+│   ├── characters/
+│   │     ├── GameCharacter.class         
+│   │     ├── Elara.class                  
+│   │     ├── Orion.class                  
+│   │     ├── Calisto.class               
+│   │     └── Luna.class                
+│   ├── utils/
+│   │     ├── GameUtils.class           
+│   │     └── DestinyDraw.class         
+│   ├── phases/
+│   │     ├── IntroPhase.class       
+│   │     ├── GameSetup.class           
+│   │     ├── MoonPhase.class       
+│   │     ├── DawnPhase.class              
+│   │     ├── VotingPhase.class           
+│   │     └── NarrativeEnding.class      
+|   ├── MoonlightsGambit.class         
+|   └── MoonlightsGambitGame.class
+|
+└── README.md (optional)       
 ```
 
 ## *ੈ✩‧₊˚ ~ OOP Principles
