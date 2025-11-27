@@ -38,63 +38,18 @@ Punzalan, Athena Ashley R.
 
 </div>
 
-## ‧₊˚ ┊ Overview
+## ‧₊˚ ~ Overview
 **Moonlight's Gambit** is a 4-player social deduction game set in the ancient academy of Artemia, where players discover hidden loyalties through magical mechanics and tragic romance. Souls bound by love and friendship must navigate secrets that could destroy everything they hold dear.
 
 In this game of hidden allegiances, players take on fantasy roles with unique abilities, all while concealing their true intentions. Will love survive duty? Will friendship endure betrayal? The masks are on... let the tragedy unfold.
 
-## ‧₊˚ ☾. ⋅ ┊ Features
+## ˗ˏˋ ★ ˎˊ˗ ~ Features
 
-1. **Four-player hidden-role setup**  
-   - Random, unique assignment of Believer, Reaper, Seeker, Saboteur.  
-   - Private role reveal with lore blurb and team allegiance.
-
-2. **Night-phase ability system**  
-   - Believer: bless/protect (can self-target).  
-   - Reaper: hunt/kill (blocked if target is blessed).  
-   - Seeker: investigate (learns exact role name).  
-   - Saboteur: block next-round ability of chosen player.  
-   - All actions are input-validated; sabotaged players are notified.
-
-3. **Dawn-phase resolution**  
-   - Host announces death or “no death”.
-   - Survivor list printed after every dawn.
-
-4. **Day-phase elimination vote**  
-   - Living players cast one vote each (no self-voting).  
-   - Tie = no elimination; majority = banishment.  
-   - Vote counts displayed publicly.
-
-5. **Automatic win detection**  
-   - Early win if one team is completely eliminated.  
-   - Early win if only two players of the same team remain.
-
-6. **Final-two special endings (branching narrative)**  
-   - Lovers (Elara + Orion) or Friends (Calisto + Luna) choose “Peace” or “Chaos”.  
-   - Mutual peace triggers joint victory and unique epilogue.  
-   - Any other pair proceeds to Destiny Draw duel.
-
-7. **Destiny Draw duel mini-game**  
-   - First to 5 points; simultaneous keep/redraw decisions.  
-   - Pay-off matrix exactly as spec (keeper vs re-drawer earns 2 pts on upset, 1 pt on tie).  
-   - Live scoreboard each round.
-
-8. **Type-writer narrative & clear-screen immersion**  
-   - All story text prints with adjustable character delay.  
-   - Cross-platform screen-clear (falls back to blank lines if native command fails).
-
-9. **Bullet-proof console input**  
-   - Non-blocking retry on empty, non-numeric, or out-of-range entries.  
-   - Press-enter prompts prevent text spill.
-
-10. **Replayability**  
-    - Roles shuffled every run; identical player names allowed across sessions.
-
-## ☾₊‧⁺ ┊ Characters & Teams
-
+**☾₊‧⁺ ~ Characters & Teams**
+<div align="center">
 <table>
 <tr>
-    <th colspan="5" style="text-align: center;">✦ THE LOVERS ✦</th>
+    <th colspan="5" style="text-align: center;">♡ THE LOVERS ♡</th>
 </tr>
 <tr>
     <th>Role</th>
@@ -143,39 +98,66 @@ In this game of hidden allegiances, players take on fantasy roles with unique ab
 </tr>
 </table>
 
-## ˖°𓇼 ┊ Game Flow
+☾・──────────────────────────────────────────────────────────────────────────・☽
+</div>
 
-**✦ Introduction Phase**  
-Story gets introduced, 4 players input their names, and roles are automatically assigned to each player
+**˖°𓇼 ~ Game Flow**
 
-**✦ Night Phase**  
-Players use their unique abilities in secret
+1. **✦ Introduction Phase**  
+            Story gets introduced, 4 players input their names, and roles are randomly assigned to each player
 
-**✦ Dawn Phase**  
-The host reveals who died during the night
+2. **✦ Night Phase**  
+            Players use their unique abilities in secret
 
-**✦ Voting Phase**  
-Players debate and vote to eliminate one suspect
+3. **✦ Dawn Phase**  
+            The host reveals who died during the night
 
-**✦ Final Scenarios**  
+4. **✦ Voting Phase**  
+            Players debate and vote to eliminate one suspect
+   
+<div align="center">☾・──────────────────────────────────────────────────────────────────────────・☽</div>
+
+**⚝ ~ Final Scenarios**  
 - **Same Team Victory**: Immediate win if last two players share allegiance  
 - **Lovers/Friends Choice**: Special story line to choose peace or chaos  
 - **Destiny Draw**: High-stakes duel for cross-team final pairs
 
-### 🀥🀣🀦🀧🀨 ┊ Destiny Draw Mechanics
+<div align="center">☾・──────────────────────────────────────────────────────────────────────────・☽</div>
 
-The final duel where players draw numbers (1-10) and choose to **KEEP** or **REDRAW**: <br/>
-*First to 5 points claims victory for their team*
+**🀥🀣🀦🀧🀨 ~ Destiny Draw Mechanics**
+The final duel where the last two players alive draw numbers (1-10) and choose to **KEEP** or **REDRAW**: <br/>
 
-| Scenario | Outcome |
-|----------|---------|
-| Both KEEP | Higher number wins 1 point |
-| Both REDRAW | Higher number wins 1 point |
-| Mixed + Redraw > Keep | Redrawer wins 2 points |
-| Mixed + Redraw < Keep | Keeper wins 2 points |
-| Mixed + Redraw = Keep | Keeper wins 1 point |
+<div align="center">
+<table>
+<tr>
+    <th>Scenario</th>
+    <th>Outcome</th>
+</tr>
+<tr>
+    <td>Both KEEP</td>
+    <td>Higher number wins 1 point</td>
+</tr>
+<tr>
+    <td>Both REDRAW</td>
+    <td>Higher number wins 1 point</td>
+</tr>
+<tr>
+    <td>Mixed + Redraw > Keep</td>
+    <td>Redrawer wins 2 points</td>
+</tr>
+<tr>
+    <td>Mixed + Redraw < Keep</td>
+    <td>Keeper wins 2 points</td>
+</tr>
+<tr>
+    <td>Mixed + Redraw = Keep</td>
+    <td>Keeper wins 1 point</td>
+</tr>
+</table>
+<i>First to 5 points claims victory for their team</i>
+</div>
 
-## 𓍢ִ໋🀦 ┊ Project Structure
+## 𓍢ִ໋🀦 ~ Project Structure
 ```
 moonlightsgambit/
 ├── enums/
@@ -202,18 +184,21 @@ moonlightsgambit/
 └── MoonlightsGambitGame.java       – entry point
 ```
 
-## ✦ ┊ OOP Principles
+## *ੈ✩‧₊˚ ~ OOP Principles
 
+##  ִ ࣪𖤐~ How to Run the Program
+1. **Download the ZIP File** of Moonlight's Gambit from the repository.
+2. **Open Visual Studio Code** and select "Open Folder", then navigate to the extracted project folder.
+3. **Open the main game file**: `MoonlightsGambitGame.java`
+4. **Open the terminal** in VS Code (Ctrl + `)
+5. **Compile and run** with these commands:
+   ```bash
+   javac -d . enums/*.java interfaces/*.java characters/*.java utils/*.java phases/*.java *.java
+   java MoonlightsGambitGame
 
-## ✦ ┊ How to Run the Program
+## ᯓ★ ~ Sample Output
 
-**Compilation**
-```bash
-placeholder
-```
-## ✦ ┊ Sample Output
-
-## ⋆⭒˚𖠋𖠋𖠋𖠋*.⋆ ┊ Contributors
+## ⋆⭒˚𖠋𖠋𖠋𖠋*.⋆ ~ Contributors
 <div align="center">⠀⠀⠀
 <table>
 <tr>
@@ -241,8 +226,10 @@ placeholder
 *"Moonlight's Gambit represents the peak of our team's collective dedication. Every member contributed to both programming and design, participating in the project's development from the initial concept to final implementation. This collaborative spirit brought our vision for Artemia Academy to life."*
 </div>
 
-## જ⁀➴ ♡ ┊ Acknowledgement
-*"Our deepest appreciation goes to our instructor, Ma'am Fatima, for her mentorship in object-oriented programming, and to our peers for creating an environment of collaboration and growth. Thank you for being part of our development journey."*
+## જ⁀➴ ♡ ~ Acknowledgement
+<div align="justify">⠀
+"Our deepest appreciation goes to our instructor, Ma'am Fatima, for her mentorship in object-oriented programming, and to our peers for creating an environment of collaboration and growth. Thank you for being part of our development journey."
+</div>
 
----
-*☪︎ ִ ֶ֢࣪⋆ THE END ⋆࿔࿐ ...or is it merely the beginning?*
+***
+<div align="center">⠀<i>☪︎ ִ ֶ֢࣪⋆ THE END ⋆࿔࿐ ...or is it merely the beginning?</i> </div>
