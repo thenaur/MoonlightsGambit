@@ -203,7 +203,7 @@ moonlightsgambit/
 |   ├── MoonlightsGambit.class         
 |   └── MoonlightsGambitGame.class
 |
-└── README.md (optional)       
+└── README.md       
 ```
 
 ## *ੈ✩‧₊˚ ~ OOP Principles
