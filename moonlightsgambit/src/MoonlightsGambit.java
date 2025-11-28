@@ -340,9 +340,9 @@ public class MoonlightsGambit {
       
    // Shows friendship remains message
     public void displayFriendshipRemains() {
-        System.out.println("=".repeat(50));
-        System.out.println("         FRIENDSHIP SURVIVES THE DARKNESS");
-        System.out.println("=".repeat(50));
+        System.out.println("=".repeat(52));
+        System.out.println("          FRIENDSHIP SURVIVES THE DARKNESS");
+        System.out.println("=".repeat(52));
         System.out.println("\nCalisto and Luna choose friendship over conflict...");
         System.out.println("Their bond remains, though forever changed...");
     }
@@ -364,3 +364,4 @@ public class MoonlightsGambit {
         displayFateConclusion();
     }
 }
+
