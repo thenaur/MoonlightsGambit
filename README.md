@@ -180,28 +180,29 @@ moonlightsgambit/
 |   └── MoonlightsGambitGame.java       – main method: session loop, crash recovery, play-again
 |
 ├── bin/
-|   ├── enums/
-│   │     └── Team.class                   
-│   ├── interfaces/
-│   │     └── GamePhase.class             
-│   ├── characters/
-│   │     ├── GameCharacter.class         
-│   │     ├── Elara.class                  
-│   │     ├── Orion.class                  
-│   │     ├── Calisto.class               
-│   │     └── Luna.class                
-│   ├── utils/
-│   │     ├── GameUtils.class           
-│   │     └── DestinyDraw.class         
-│   ├── phases/
-│   │     ├── IntroPhase.class       
-│   │     ├── GameSetup.class           
-│   │     ├── MoonPhase.class       
-│   │     ├── DawnPhase.class              
-│   │     ├── VotingPhase.class           
-│   │     └── NarrativeEnding.class      
-|   ├── MoonlightsGambit.class         
-|   └── MoonlightsGambitGame.class
+|   ├──moonlightsgambit/
+|      ├── enums/
+│      │     └── Team.class                   
+│      ├── interfaces/
+│      │     └── GamePhase.class             
+│      ├── characters/
+│      │     ├── GameCharacter.class         
+│      │     ├── Elara.class                  
+│      │     ├── Orion.class                  
+│      │     ├── Calisto.class               
+│      │     └── Luna.class                
+│      ├── utils/
+│      │     ├── GameUtils.class           
+│      │     └── DestinyDraw.class         
+│      ├── phases/
+│      │     ├── IntroPhase.class       
+│      │     ├── GameSetup.class           
+│      │     ├── MoonPhase.class       
+│      │     ├── DawnPhase.class              
+│      │     ├── VotingPhase.class           
+│      │     └── NarrativeEnding.class      
+|      ├── MoonlightsGambit.class         
+|      └── MoonlightsGambitGame.class
 |
 └── README.md       
 ```
