@@ -54,14 +54,12 @@ public class NarrativeEnding {
         System.out.println("                               LOVE CONQUERS ALL!");
         System.out.println("*".repeat(80));
 
-        System.out.println("\n" + "-".repeat(80));
         GameUtils.typeText("\nElara: \"We've survived, and yet the night feels heavier than before.\"", 30);
         GameUtils.typeText("Orion: \"Fate has spared us both… and shadows still linger between us.\"", 30);
         GameUtils.typeText("", 30);
         GameUtils.typeText("In the silent halls of Artemia, two figures stand apart yet unharmed.", 30);
         GameUtils.typeText("Neither light nor shadow claims total victory, and the night holds its breath.", 30);
         GameUtils.typeText("Bonds remain intact, yet every choice leaves a trace on hearts and halls alike.", 30);
-        System.out.println("\n" + "-".repeat(80));
         
         GameUtils.ENTERKey();
         displayGameConclusion(game, elara, orion, "LOVE HAS TRIUMPHED OVER WAR!");
@@ -74,7 +72,6 @@ public class NarrativeEnding {
         System.out.println("                              A WOUNDED FRIENDSHIP REMAINS");
         System.out.println("*".repeat(88));
         
-        System.out.println("\n" + "-".repeat(88));
         GameUtils.typeText("\nCalisto: \"We've survived… though trust will not be so easily restored.\"", 30);
         GameUtils.typeText("Luna: \"Chaos and order coexist for now, but nothing feels certain.\"", 30);
         GameUtils.typeText("", 30);
@@ -85,7 +82,6 @@ public class NarrativeEnding {
         GameUtils.typeText("with a newfound caution, the thrill of chaos tempered by the cost of nearly losing", 30);
         GameUtils.typeText("her oldest friend. The bond between seeker and saboteur has not completely broken,", 30);
         GameUtils.typeText("but it now exists in the fragile space between what was and what might never be again.", 30);
-        System.out.println("\n" + "-".repeat(88));
         
         GameUtils.ENTERKey();
         displayGameConclusion(game, calisto, luna, "    FRIENDSHIP SURVIVES, CHANGED BUT UNBROKEN!");
@@ -112,3 +108,4 @@ public class NarrativeEnding {
         System.out.println("=".repeat(50));
     }
 }
+
