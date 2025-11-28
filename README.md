@@ -180,7 +180,7 @@ moonlightsgambit/
 |   └── MoonlightsGambitGame.java       – main method: session loop, crash recovery, play-again
 |
 ├── bin/
-|   ├──moonlightsgambit/
+|   └──moonlightsgambit/
 |      ├── enums/
 │      │     └── Team.class                   
 │      ├── interfaces/
