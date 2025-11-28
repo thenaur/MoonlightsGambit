@@ -237,7 +237,7 @@ moonlightsgambit/
 2. **Open Visual Studio Code** and select "Open Folder", then navigate to the extracted project folder.
 3. **Open the main game file**: `MoonlightsGambitGame.java`
 4. **Open the terminal** in VS Code (Ctrl + `)
-5. ** Use this command to compile and run:**
+5. **Use this command to compile and run:**
    ```bash
    javac -d bin -cp src (Get-ChildItem -Path src -Recurse -Filter "*.java").FullName
 6. **Run the program using:** 
