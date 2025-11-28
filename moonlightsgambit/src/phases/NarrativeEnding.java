@@ -40,7 +40,7 @@ public class NarrativeEnding {
         GameUtils.typeText("A new dawn rises over the academy, not without scars, but with the promise of peace carefully won and cherished.", 30);
         
         System.out.println("\n" + "*".repeat(50));
-        System.out.println("                 LIGHT PREVAILS");
+        System.out.println("                  LIGHT PREVAILS");
         System.out.println("                    [THE END.]");
         System.out.println("*".repeat(50));
         
@@ -62,7 +62,7 @@ public class NarrativeEnding {
         GameUtils.typeText("Bonds remain intact, yet every choice leaves a trace on hearts and halls alike.", 30);
         
         GameUtils.ENTERKey();
-        displayGameConclusion(game, elara, orion, "LOVE HAS TRIUMPHED OVER WAR!");
+        displayGameConclusion(game, elara, orion, "           LOVE HAS TRIUMPHED OVER WAR!");
     }
 
     // Shows friends victory scenario
@@ -104,8 +104,9 @@ public class NarrativeEnding {
         }
         
         System.out.println("\n" + "=".repeat(50));
-        System.out.println("           " + victoryMessage);
+        System.out.println(victoryMessage);
         System.out.println("=".repeat(50));
     }
 }
+
 
