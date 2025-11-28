@@ -101,7 +101,7 @@ public class GameUtils {
 // Safely reads integer within specified range
     public static int safeReadInt(Scanner scanner, int min, int max, String prompt) {
         while (true) {
-            System.out.print(prompt);
+            System.out.print(prompt + " ");
             String rawInput = scanner.nextLine().trim();
 
             if (isInputEmpty(rawInput)) {
@@ -137,3 +137,4 @@ public class GameUtils {
         }
     }
 }
+
