@@ -68,9 +68,9 @@ public class DestinyDraw {
     // Shows game introduction
     private void displayGameIntroduction() {
         GameUtils.clearScreen();
-        System.out.println("*".repeat(65));
-        System.out.println("                     DESTINY DRAW CHALLENGE!");
-        System.out.println("*".repeat(65));
+        System.out.println("*".repeat(69));
+        System.out.println("                       DESTINY DRAW CHALLENGE!");
+        System.out.println("*".repeat(69));
         
         System.out.printf("\n%s (%s) vs %s (%s)%n", 
             player1.getName(), getTeamDisplay(player1.getTeam()), 
@@ -298,3 +298,4 @@ public class DestinyDraw {
         return team == Team.GOOD ? "The Light" : "The Shadows";
     }
 }
+
