@@ -43,7 +43,7 @@ public class DawnPhase implements GamePhase {
         GameCharacter killedPlayer = game.processNightActions();
         
         System.out.println("\n[ANNOUNCEMENT] THE HOST ANNOUNCES:");
-        System.out.println("=".repeat(50));
+        System.out.println("=".repeat(65));
         
         if (killedPlayer != null) {
             handlePlayerDeath(killedPlayer);
@@ -102,3 +102,4 @@ public class DawnPhase implements GamePhase {
         return "Dawn Phase";
     }
 }
+
