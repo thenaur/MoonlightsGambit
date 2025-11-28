@@ -23,8 +23,6 @@ public class NarrativeEnding {
         System.out.println("                DARKNESS TRIUMPHS");
         System.out.println("                    [THE END.]");
         System.out.println("*".repeat(50));
-        
-        GameUtils.ENTERKey();
     }
 
     // Shows good team victory narrative
@@ -43,8 +41,6 @@ public class NarrativeEnding {
         System.out.println("                  LIGHT PREVAILS");
         System.out.println("                    [THE END.]");
         System.out.println("*".repeat(50));
-        
-        GameUtils.ENTERKey();
     }
 
     //Displays lovers victory scenario with special narrative
@@ -108,5 +104,6 @@ public class NarrativeEnding {
         System.out.println("=".repeat(50));
     }
 }
+
 
 
