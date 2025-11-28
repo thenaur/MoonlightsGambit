@@ -16,9 +16,9 @@ public class IntroPhase implements GamePhase {
     // Shows game title with formatted header
     private void displayGameTitle() {
         GameUtils.clearScreen();
-        System.out.println("*".repeat(35));
-        System.out.println("        MOONLIGHT'S GAMBIT");
-        System.out.println("*".repeat(35));
+        System.out.println("*".repeat(36));
+        System.out.println("         MOONLIGHT'S GAMBIT");
+        System.out.println("*".repeat(36));
         GameUtils.ENTERKey();
     }
     
@@ -47,3 +47,4 @@ public class IntroPhase implements GamePhase {
         return "Introduction";
     }
 }
+
