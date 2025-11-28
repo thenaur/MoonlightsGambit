@@ -230,9 +230,9 @@ public class VotingPhase implements GamePhase {
     // Shows lovers dilemma introduction
     private void displayLoversIntroduction() {
         GameUtils.clearScreen();
-        System.out.println("-".repeat(75));
-        System.out.println("        	 	    THE LOVERS DILEMMA");
-        System.out.println("-".repeat(75));
+        System.out.println("-".repeat(76));
+        System.out.println("        	 	     THE LOVERS DILEMMA");
+        System.out.println("-".repeat(76));
         GameUtils.typeText("\nOnly two souls remain in the moonlit academy...", 30);
         GameUtils.typeText("Elara and Orion stand facing each other, the weight of their hidden truths", 30);
         GameUtils.typeText("finally revealed. The bonds of love clash with the call of duty.", 30);
@@ -245,12 +245,13 @@ public class VotingPhase implements GamePhase {
         System.out.println("-".repeat(70));
         GameUtils.typeText("Elara's eyes meet Orion's across the shattered hall.", 30);
         GameUtils.typeText("The man you love stands opposed to your beliefs.", 30);
-        GameUtils.typeText("Do you choose to follow your heart or protect your destiny?", 30);
+        GameUtils.typeText("\nDo you choose to follow your heart or protect your destiny?", 30);
         int choice = readInt(1, 2, """
                                    1. Chaos - Fight for your cause, even if it destroys your love
                                    2. Peace - Choose love over war, embrace the person behind the role
-                                   Choice (1 or 2): 
-                                   """);
+                                   Choice (1 or 2):""");
+        
+        System.out.println("\nAction recorded...");
         GameUtils.ENTERKey();
         return choice;
     }
@@ -261,12 +262,13 @@ public class VotingPhase implements GamePhase {
         System.out.println("-".repeat(85));
         GameUtils.typeText("Orion, the woman you swore you'd choose over anything stands as your final obstacle.", 30);
         GameUtils.typeText("Every memory you share wars with the duty you serve.", 30);
-        GameUtils.typeText("What will you sacrifice for victory?", 30);
+        GameUtils.typeText("\nWhat will you sacrifice for victory?", 30);
         int choice = readInt(1, 2, """
                                    1. Chaos - Complete your mission, no matter the cost
                                    2. Peace - Lay down your blade for the love you found
-                                   Choice (1 or 2): 
-                                   """);
+                                   Choice (1 or 2):""");
+        
+        System.out.println("\nAction recorded...");
         GameUtils.ENTERKey();
         return choice;
     }
@@ -326,7 +328,7 @@ public class VotingPhase implements GamePhase {
         System.out.println("-".repeat(61));
         System.out.println("                   THE FRIENDS' CROSSROADS");
         System.out.println("-".repeat(61));
-        GameUtils.typeText("Only two souls remain in the moonlit academy...", 30);
+        GameUtils.typeText("\nOnly two souls remain in the moonlit academy...", 30);
         GameUtils.typeText("Calisto and Luna stand amidst the ruins of their friendship,", 30);
         GameUtils.typeText("childhood bonds shattered by opposing loyalties.", 30);
         GameUtils.ENTERKey();
@@ -338,12 +340,13 @@ public class VotingPhase implements GamePhase {
         System.out.println("-".repeat(70));
         GameUtils.typeText("Calisto, you face the friend who walked beside you since childhood.", 30);
         GameUtils.typeText("The one who shared your dreams now stands as your enemy.", 30);
-        GameUtils.typeText("Do you hold to justice or to memory?", 30);
+        GameUtils.typeText("\nDo you hold to justice or to memory?", 30);
         int choice = readInt(1, 2, """
                                    1. Chaos - Uphold the truth, even if it breaks your oldest bond
                                    2. Peace - Choose friendship over duty, forgive the betrayal
-                                   Choice (1 or 2): 
-                                   """);
+                                   Choice (1 or 2):""");
+        
+        System.out.println("\nAction recorded...");
         GameUtils.ENTERKey();
         return choice;
     }
@@ -354,12 +357,13 @@ public class VotingPhase implements GamePhase {
         System.out.println("-".repeat(70));
         GameUtils.typeText("Luna, your dearest friend has discovered the chaos you kept buried.", 30);
         GameUtils.typeText("The havoc you wreaked has led to this final moment.", 30);
-        GameUtils.typeText("What matters more – your cause or your companion?", 30);
+        GameUtils.typeText("\nWhat matters more – your cause or your companion?", 30);
         int choice = readInt(1, 2, """
                                    1. Chaos - See your mission through, no turning back now
                                    2. Peace - Remember what you were before the shadows called
-                                   Choice (1 or 2): 
-                                   """);
+                                   Choice (1 or 2):""");
+        
+        System.out.println("\nAction recorded...");
         GameUtils.ENTERKey();
         return choice;
     }
@@ -453,3 +457,4 @@ public class VotingPhase implements GamePhase {
         return "Voting Phase";
     }
 }
+
