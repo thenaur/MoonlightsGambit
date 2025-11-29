@@ -18,7 +18,7 @@ public class MoonlightsGambitGame {
     
     // Shows game welcome message
     private static void displayGameWelcome() {
-        System.out.println("Initializing Moonlight's Gambit...");
+        System.out.println("\nInitializing Moonlight's Gambit...");
         GameUtils.ENTERKey();
     }
     
@@ -67,4 +67,5 @@ public class MoonlightsGambitGame {
         System.out.println("\nThank you for playing Moonlight's Gambit!");
     }
 }
+
 
