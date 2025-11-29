@@ -56,7 +56,7 @@ public class Calisto extends GameCharacter {
         if (target == null) {
             GameUtils.typeText("[ERROR] Cannot investigate - no target selected", TEXT_DELAY_MS);
         } else if (!target.isAlive()) {
-            GameUtils.typeText(String.format("[ERROR] Cannot investigate %s - target is not alive", target.getName()), TEXT_DELAY_MS);
+            GameUtils.typeText(String.format("[BLOCKED] A dark fog clouds s%'s vision - the truth remains hidden!", getName()), TEXT_DELAY_MS);
         }
     }
 
@@ -84,3 +84,4 @@ public class Calisto extends GameCharacter {
     public void resetNightAction() { 
     }
 }
+
