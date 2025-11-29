@@ -6,7 +6,6 @@ import moonlightsgambit.characters.*;
 import moonlightsgambit.interfaces.GamePhase;
 import moonlightsgambit.utils.GameUtils;
 
-
 // Handles moon phase where players perform night actions
 public class MoonPhase implements GamePhase {
     private final Scanner scanner = new Scanner(System.in);
@@ -30,9 +29,9 @@ public class MoonPhase implements GamePhase {
     // Shows moon phase header
     private void displayMoonPhaseHeader() {
         GameUtils.clearScreen();
-        System.out.println("*".repeat(42));
-        System.out.println("                MOON PHASE");
-        System.out.println("*".repeat(42));
+        System.out.println("*".repeat(44));
+        System.out.println("                 MOON PHASE");
+        System.out.println("*".repeat(44));
         GameUtils.typeText("\nMoonlight descends upon Artemia Academy...", 40);
         GameUtils.typeText("Hidden powers awaken in the shadows...", 40);
         GameUtils.ENTERKey();
@@ -51,7 +50,6 @@ public class MoonPhase implements GamePhase {
     private void executeSinglePlayerAction(GameCharacter player, MoonlightsGambit game) {
         GameUtils.clearScreen();
         displayPlayerTurnInfo(player);
-
 
         System.out.println(player.getLoreDescription());
 
@@ -87,6 +85,7 @@ public class MoonPhase implements GamePhase {
     private void printTargets(GameCharacter actor, List<GameCharacter> list) {
         System.out.println("\nAlive players to target:");
         int number = (actor instanceof Elara) ? 0 : 1; 
+        
         for (GameCharacter t : list) {
             System.out.printf("%d. %s%n", number++, t.getName());
         }
@@ -118,4 +117,3 @@ public class MoonPhase implements GamePhase {
         return "Moon Phase";
     }
 }
-
