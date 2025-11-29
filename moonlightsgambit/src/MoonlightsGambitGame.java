@@ -5,8 +5,7 @@ import java.util.Scanner;
 import moonlightsgambit.utils.GameUtils;
 
 // Main entry point for the Moonlight's Gambit game
-public class MoonlightsGambitGame {
-    
+public class MoonlightsGambitGame {    
     public static void main(String[] args) {
         displayGameWelcome();
         
@@ -44,13 +43,13 @@ public class MoonlightsGambitGame {
         Scanner sc = new Scanner(System.in);
         System.out.println("~*~*".repeat(23));
         GameUtils.typeText("The story ends... but every ending is a new beginning!", 25);
-        System.out.print("Would you like to play again?  (1 - NO , 2 - YES): ");
-    
-        int choice = GameUtils.safeReadInt(sc, 1, 2, "");
+        int choice = GameUtils.safeReadInt(sc, 1, 2, "Would you like to play again?  (1 - NO , 2 - YES):");
+        
         if (choice == 1) {          // 1 = stop
             displayGoodbye();
             return false;
         }
+        
         return true;                // 2 = restart
     }
 
