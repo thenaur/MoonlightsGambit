@@ -1,3 +1,4 @@
+
 package moonlightsgambit;
 
 import java.util.*;
@@ -37,7 +38,6 @@ public class MoonlightsGambit {
 
         int cycle = 1;
         while (!gameOver) {
-            displayCycleHeader(cycle);
             
             List<GameCharacter> alivePlayers = getAlivePlayers();
             if (isFinalTwoScenario(alivePlayers)) {
@@ -75,9 +75,11 @@ public class MoonlightsGambit {
     }
 
     // Shows cycle header
-    private void displayCycleHeader(int cycle) {
+    public void displayCycleHeader(int cycle) {
+        GameUtils.clearScreen();
         System.out.printf("\n--- CYCLE %d ---%n", cycle);
         System.out.println("*".repeat(50));
+        GameUtils.ENTERKey();
     }
 
     // Executes all game phases for current cycle
@@ -85,12 +87,17 @@ public class MoonlightsGambit {
         for (GamePhase phase : phases) {
             if (gameOver) break;
             if (phase == null) continue;
-            
+        
             // Skip setup phases after first cycle
             if (shouldSkipPhase(phase, cycle)) continue;
-            
+        
+            // Display cycle header before MoonPhase for cycles after tie
+            if (cycle > 1 && phase instanceof MoonPhase) {
+                displayCycleHeader(cycle);
+            }
+        
             phase.executePhase(this);
-            
+        
             // Check for final two condition after each phase
             if (getAlivePlayers().size() == 2 && !gameOver) {
                 handleFinalTwo(getAlivePlayers());
