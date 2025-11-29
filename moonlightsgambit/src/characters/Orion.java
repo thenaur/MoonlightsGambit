@@ -21,22 +21,19 @@ public class Orion extends GameCharacter {
     public void performAction(GameCharacter target, MoonlightsGambit game) {
         validateGameInstance(game);
         
+        // ALWAYS show hunt attempt first
+        displayHuntMessage(target);
+        
         if (isAbilityBlocked()) {
-            displayAbilityBlockedMessage();
+            // No additional message - keep it mysterious!
             return;
         }
         
         if (isValidBasicTarget(target)) {
-            executeHuntAction(target, game);
+            recordHuntAction(target, game);
         } else {
             displayInvalidTargetMessage(target);
         }
-    }
-    
-    // Executes hunt action
-    private void executeHuntAction(GameCharacter target, MoonlightsGambit game) {
-        displayHuntMessage(target);
-        recordHuntAction(target, game);
     }
     
     private void displayHuntMessage(GameCharacter target) {
@@ -45,10 +42,6 @@ public class Orion extends GameCharacter {
     
     private void recordHuntAction(GameCharacter target, MoonlightsGambit game) {
         game.recordHunt(target);
-    }
-    
-    private void displayAbilityBlockedMessage() {
-        GameUtils.typeText(String.format("[HUNT] %s marks %s for the reaping!", getName(), target.getName()), TEXT_DELAY_MS);
     }
     
     private void displayInvalidTargetMessage(GameCharacter target) {
@@ -74,7 +67,6 @@ public class Orion extends GameCharacter {
         return LORE_DESCRIPTION;
     }
     
-
     @Override
     public String getRoleName() {
         return ROLE_NAME;
@@ -84,4 +76,3 @@ public class Orion extends GameCharacter {
     public void resetNightAction() { 
     }
 }
-
