@@ -84,5 +84,3 @@ public class Calisto extends GameCharacter {
     public void resetNightAction() { 
     }
 }
-
-
