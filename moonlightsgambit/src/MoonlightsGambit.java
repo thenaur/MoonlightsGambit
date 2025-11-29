@@ -1,4 +1,3 @@
-
 package moonlightsgambit;
 
 import java.util.*;
@@ -18,7 +17,6 @@ public class MoonlightsGambit {
     
     // Constants for game configuration
     private static final int MAX_PLAYERS = 4;
-    private static final int MIN_PLAYERS_FOR_VOTING = 3;
 
     // Resets game to initial state
     public void resetGame() {
@@ -174,17 +172,11 @@ public class MoonlightsGambit {
     public void recordHunt(GameCharacter target) { 
         this.huntTarget = target; 
     }
-    
-    public void recordProtection(GameCharacter target) { 
-    }
-    
+   
     public void recordSabotage(GameCharacter target) {
         playersToSabotageNextRound.add(target); 
     }
     
-    public void recordInvestigation(GameCharacter target) { 
-    }
-
     // Processes night actions and determines outcomes
     public GameCharacter processNightActions() {
         if (huntTarget != null && !huntTarget.isBlessed()) {
