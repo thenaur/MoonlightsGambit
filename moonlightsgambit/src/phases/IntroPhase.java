@@ -13,7 +13,8 @@ public class IntroPhase implements GamePhase {
         displayWelcomeMessage();
         game.displayCycleHeader(1);
     }
-    
+
+    // Displays game title with formatted header
     private void displayGameTitle() {
         GameUtils.clearScreen();
         GameUtils.typeText("*".repeat(36), 10);
@@ -47,4 +48,5 @@ public class IntroPhase implements GamePhase {
         return "Introduction";
     }
 }
+
 
