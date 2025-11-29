@@ -23,6 +23,7 @@ public class GameSetup implements GamePhase {
         GameCharacter[] players = initializePlayers();
         game.setPlayers(players);
         displayCompletionMessage();
+        game.displayCycleHeader(1);
     }
 
    // Shows setup phase header
@@ -140,5 +141,3 @@ public class GameSetup implements GamePhase {
         return "Game Setup";
     }
 }
-
-
