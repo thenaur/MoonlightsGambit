@@ -86,20 +86,10 @@ public class GameUtils {
         try {
         // Only read once using Scanner
             new Scanner(System.in).nextLine();
-        } catch (Exception e) {
-        // Handle any exceptions silently
-        }
+        } catch (Exception e) {}
     }
 
-    private static void waitForEnterPress() throws IOException {
-        System.in.read();
-    }
-
-    private static void clearInputBuffer() {
-        new Scanner(System.in).nextLine();
-    }
-
-// Safely reads integer within specified range
+    // Safely reads integer within specified range
     public static int safeReadInt(Scanner scanner, int min, int max, String prompt) {
         while (true) {
             System.out.print(prompt + " ");
@@ -138,7 +128,3 @@ public class GameUtils {
         }
     }
 }
-
-
-
-
