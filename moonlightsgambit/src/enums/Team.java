@@ -14,20 +14,11 @@ public enum Team {
     public String getDisplayName() {
         return displayName;
     }
-    
-    // Checks if this team opposes another team
-    public boolean isOpposingTeam(Team otherTeam) {
-        return this != otherTeam;
-    }
-    
-    // Gets opposing team
-    public Team getOpposingTeam() {
-        return this == GOOD ? EVIL : GOOD;
-    }
-   
+
     @Override
     public String toString() {
         return displayName;
     }
 }
+
 
