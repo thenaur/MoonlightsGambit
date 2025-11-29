@@ -21,7 +21,6 @@ public class GameSetup implements GamePhase {
     public void executePhase(MoonlightsGambit game) {
         displaySetupHeader();
         GameCharacter[] players = initializePlayers();
-        assignPlayerRoles(players);
         game.setPlayers(players);
         displayCompletionMessage();
     }
@@ -46,11 +45,6 @@ public class GameSetup implements GamePhase {
         }
         
         return players;
-    }
-
-    //Assigns roles to all players
-    private void assignPlayerRoles(GameCharacter[] players) {
-        // Role assignment is handled in setupPlayer method
     }
 
     // Sets up individual player with name and role
@@ -146,4 +140,5 @@ public class GameSetup implements GamePhase {
         return "Game Setup";
     }
 }
+
 
