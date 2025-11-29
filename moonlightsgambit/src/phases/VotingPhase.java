@@ -38,9 +38,9 @@ public class VotingPhase implements GamePhase {
     // Shows voting phase header
     private void displayVotingPhaseHeader() {
         GameUtils.clearScreen();
-        System.out.println("*".repeat(40));
-        System.out.println("           VOTING PHASE");
-        System.out.println("*".repeat(40));
+        System.out.println("*".repeat(56));
+        System.out.println("                      VOTING PHASE");
+        System.out.println("*".repeat(56));
         GameUtils.typeText("\nThe academy gathers to cast their votes.", 30);
         GameUtils.typeText("Each member must accuse one among them to be banished.", 30);
         GameUtils.ENTERKey();
@@ -103,9 +103,9 @@ public class VotingPhase implements GamePhase {
     // Processes voting results and determines elimination
     private void processVotingResults(MoonlightsGambit game, Map<GameCharacter, Integer> votes, List<GameCharacter> alivePlayers) {
         GameUtils.clearScreen();
-        System.out.println("*".repeat(50));
-        System.out.println("                 VOTING RESULTS");
-        System.out.println("*".repeat(50));
+        System.out.println("*".repeat(68));
+        System.out.println("                           VOTING RESULTS");
+        System.out.println("*".repeat(68));
 
         GameCharacter eliminated = determineEliminated(votes, alivePlayers);
 
@@ -133,34 +133,34 @@ public class VotingPhase implements GamePhase {
     // Handles tie scenario
     private void handleTieScenario() {
         System.out.println("\n[TIE] The vote ends in a stalemate!");
-        System.out.println("   No one is eliminated this round...");
-        System.out.println("   The game continues with current players!");
+        System.out.println("No one is eliminated this round...");
+        System.out.println("The game continues with current players!");
         GameUtils.ENTERKey();
     }
 
     // Determines which player is eliminated based on votes
-private GameCharacter determineEliminated(Map<GameCharacter, Integer> votes, List<GameCharacter> alivePlayers) {
-    int maxVotes = 0;
-    GameCharacter eliminated = null;
-    boolean isTie = false;
+    private GameCharacter determineEliminated(Map<GameCharacter, Integer> votes, List<GameCharacter> alivePlayers) {
+        int maxVotes = 0;
+        GameCharacter eliminated = null;
+        boolean isTie = false;
 
-    System.out.println("\nVote Count:");
+        System.out.println("\nVote Count:");
 
-    for (GameCharacter player : alivePlayers) {
-        int playerVotes = votes.getOrDefault(player, 0);
-        System.out.printf("  %s: %d votes%n", player.getName(), playerVotes);
+        for (GameCharacter player : alivePlayers) {
+            int playerVotes = votes.getOrDefault(player, 0);
+            System.out.printf("  %s: %d votes%n", player.getName(), playerVotes);
 
-        if (playerVotes > maxVotes) {
-            maxVotes = playerVotes;
-            eliminated = player;
-            isTie = false;
-        } else if (playerVotes == maxVotes && maxVotes > 0) {
-            isTie = true;
+            if (playerVotes > maxVotes) {
+                maxVotes = playerVotes;
+                eliminated = player;
+                isTie = false;
+            } else if (playerVotes == maxVotes && maxVotes > 0) {
+                isTie = true;
+            }
         }
-    }
 
-    return (isTie || maxVotes == 0) ? null : eliminated;
-}
+        return (isTie || maxVotes == 0) ? null : eliminated;
+    }
 
     /* ========== FINAL TWO PLAYERS HANDLING ========== */
 
