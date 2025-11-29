@@ -1,6 +1,7 @@
 package moonlightsgambit;
 
 import java.io.IOException;
+import java.util.Scanner;
 import moonlightsgambit.utils.GameUtils;
 
 // Main entry point for the Moonlight's Gambit game
@@ -12,8 +13,6 @@ public class MoonlightsGambitGame {
         do {
             runGameSession();
         } while (shouldPlayAgain());
-        
-        displayGameExit();
     }
     
     // Shows game welcome message
@@ -22,7 +21,6 @@ public class MoonlightsGambitGame {
         GameUtils.ENTERKey();
     }
     
-    // Runs single game session
     private static void runGameSession() {
         try {
             MoonlightsGambit game = new MoonlightsGambit();
@@ -30,42 +28,36 @@ public class MoonlightsGambitGame {
         } catch (Exception e) {
             handleGameError(e);
         }
-        
-        displayPlayAgainPrompt();
     }
     
-    // Handles game errors
     private static void handleGameError(Exception e) {
         System.out.println("\n[ERROR] An unexpected error occurred during the game.");
         System.out.println("The game session will now restart.");
         System.out.println("Error details: " + e.getMessage());
         GameUtils.ENTERKey();
     }
-    
-    // Shows play again prompt
-    private static void displayPlayAgainPrompt() {
-        System.out.println("\n" + "=".repeat(50));
-        System.out.println("           Press ENTER to play again...");
-        System.out.println("=".repeat(50));
-    }
-    
-    // Checks if user wants to play again
+
+    // Asks the user whether to start a new game.
     private static boolean shouldPlayAgain() {
-        try {
-            // Wait for ENTER key press
-            System.in.read();
-            // Clear the input buffer
-            new java.util.Scanner(System.in).nextLine();
-            return true;
-        } catch (IOException e) {
+        GameUtils.ENTERKey();
+        GameUtils.clearScreen();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("~*~*".repeat(23));
+        GameUtils.typeText("The story ends... but every ending is a new beginning!", 25);
+        System.out.print("Would you like to play again?  (1 - NO , 2 - YES): ");
+    
+        int choice = GameUtils.safeReadInt(sc, 1, 2, "");
+        if (choice == 1) {          // 1 = stop
+            displayGoodbye();
             return false;
         }
+        return true;                // 2 = restart
     }
-    
-    // Validates if phase can execute
-    private static void displayGameExit() {
-        System.out.println("\nThank you for playing Moonlight's Gambit!");
+
+    private static void displayGoodbye() {
+        GameUtils.typeText("\nYou did it! Another tale of love and loyalty written in the stars.", 30);
+        GameUtils.typeText("Thanks for playing our little moonlit drama, hope you had as much fun as we did making it!", 30);
+        GameUtils.typeText("Until next time, players!", 40);
+        GameUtils.typeText("~*~*".repeat(23), 8);
     }
 }
-
-
