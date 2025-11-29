@@ -36,7 +36,6 @@ public class Elara extends GameCharacter {
     private void executeProtectionAction(GameCharacter target, MoonlightsGambit game) {
         displayProtectionMessage(target);
         applyDivineProtection(target);
-        game.recordProtection(target);
     }
     
     private void displayProtectionMessage(GameCharacter target) {
@@ -88,3 +87,4 @@ public class Elara extends GameCharacter {
     public void resetNightAction() { 
     }
 }
+
