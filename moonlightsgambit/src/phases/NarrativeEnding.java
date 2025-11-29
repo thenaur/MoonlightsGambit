@@ -10,37 +10,37 @@ public class NarrativeEnding {
     // Shows evil team victory narrative
     public static void printEvilEnding(GameCharacter a, GameCharacter b) {
         GameUtils.clearScreen();
-        System.out.println("*".repeat(50));
-        System.out.println("                EVIL TEAM VICTORY!");
-        System.out.println("*".repeat(50));
+        System.out.println("*".repeat(180));
+        System.out.println("                                                                                 EVIL TEAM VICTORY!");
+        System.out.println("*".repeat(180));
 
         GameUtils.typeText("\nUnder the reign of shadow and disorder, the academy collapses slowly into ruin, its once-sacred halls cracking under the weight of choices twisted by fear and longing.", 30);
         GameUtils.typeText("Orion walks through the wreckage with heaviness, every crumble of stone reminding him of what Elara once believed he could become, and what he ultimately destroyed instead.", 30);
         GameUtils.typeText("Luna watches the downfall with a quiet thrill, her chaos blooming freely at last, while Orion feels each fading echo like a ghost tugging at his resolve.", 30);
         GameUtils.typeText("Artemia does not fall in flames, but in a quiet, devastating unraveling of its memories buried beneath the rubble, as its hope is swallowed by the very shadows sworn to protect it.", 30);
         
-        System.out.println("\n" + "*".repeat(50));
-        System.out.println("                DARKNESS TRIUMPHS");
-        System.out.println("                    [THE END.]");
-        System.out.println("*".repeat(50));
+        System.out.println("\n" + "*".repeat(180));
+        System.out.println("                                                                                 DARKNESS TRIUMPHS!");
+        System.out.println("                                                                                     [THE END.]");
+        System.out.println("*".repeat(180));
     }
 
     // Shows good team victory narrative
     public static void printGoodEnding(GameCharacter player1, GameCharacter player2) {
         GameUtils.clearScreen();
-        System.out.println("*".repeat(50));
-        System.out.println("                GOOD TEAM VICTORY!");
-        System.out.println("*".repeat(50));
+        System.out.println("*".repeat(126));
+        System.out.println("                                                      GOOD TEAM VICTORY!");
+        System.out.println("*".repeat(126));
 
         GameUtils.typeText("\nUnder the gentle light of the restored moon, the academy begins to heal, its ancient stones whispering of hope and renewal.", 30);
         GameUtils.typeText("Elara's faith has shielded the innocent, while Calisto's keen insight uncovered the truth before darkness could prevail.", 30);
         GameUtils.typeText("Though shadows may always linger at the edges of Artemia, the bonds of trust and justice have proven stronger than any chaos.", 30);
         GameUtils.typeText("A new dawn rises over the academy, not without scars, but with the promise of peace carefully won and cherished.", 30);
         
-        System.out.println("\n" + "*".repeat(50));
-        System.out.println("                  LIGHT PREVAILS");
-        System.out.println("                    [THE END.]");
-        System.out.println("*".repeat(50));
+        System.out.println("\n" + "*".repeat(126));
+        System.out.println("                                                        LIGHT PREVAILS!");
+        System.out.println("                                                          [THE END.]");
+        System.out.println("*".repeat(126));
     }
 
     //Displays lovers victory scenario with special narrative
@@ -104,6 +104,3 @@ public class NarrativeEnding {
         System.out.println("=".repeat(50));
     }
 }
-
-
-
