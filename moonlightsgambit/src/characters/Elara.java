@@ -53,7 +53,7 @@ public class Elara extends GameCharacter {
     }
 
     private void displayAbilityBlockedMessage() {
-        GameUtils.typeText(String.format("[BLOCKED] %s's ability is blocked by the SABOTEUR! Cannot protect.", getName()), TEXT_DELAY_MS);
+        GameUtils.typeText(String.format("[BLOCKED] A shadow disrupts %s's prayer—the protection fails!", getName()), TEXT_DELAY_MS);
     }
     
     private void displayInvalidTargetMessage(GameCharacter target) {
@@ -88,3 +88,4 @@ public class Elara extends GameCharacter {
     public void resetNightAction() { 
     }
 }
+
