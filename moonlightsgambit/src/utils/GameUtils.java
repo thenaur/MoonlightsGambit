@@ -81,12 +81,13 @@ public class GameUtils {
 
     // Waits for ENTER key press
     public static void ENTERKey() {
-        System.out.println("\n--- press enter to continue ---");
-
+    System.out.println("\n--- press enter to continue ---");
+    
         try {
-            waitForEnterPress();
-            clearInputBuffer();
-        } catch (IOException e) {
+        // Only read once using Scanner
+            new Scanner(System.in).nextLine();
+        } catch (Exception e) {
+        // Handle any exceptions silently
         }
     }
 
@@ -137,4 +138,5 @@ public class GameUtils {
         }
     }
 }
+
 
