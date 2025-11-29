@@ -201,7 +201,8 @@ moonlightsgambit/
 │      │     ├── DawnPhase.class              
 │      │     ├── VotingPhase.class           
 │      │     └── NarrativeEnding.class      
-|      ├── MoonlightsGambit.class         
+|      ├── MoonlightsGambit$1.class
+|      ├── MoonlightsGambit.class  
 |      └── MoonlightsGambitGame.class
 |
 └── README.md       
