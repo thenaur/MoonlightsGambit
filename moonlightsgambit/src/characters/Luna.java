@@ -4,7 +4,6 @@ import moonlightsgambit.MoonlightsGambit;
 import moonlightsgambit.enums.Team;
 import moonlightsgambit.utils.GameUtils;
 
-// The Saboteur character - blocks other players' abilities
 public class Luna extends GameCharacter {
     
     private static final String ROLE_NAME = "Luna - The Saboteur";
@@ -21,8 +20,10 @@ public class Luna extends GameCharacter {
     public void performAction(GameCharacter target, MoonlightsGambit game) {
         validateGameInstance(game);
         
+        // ALWAYS show sabotage attempt first
+        displaySabotageMessage(target);
+        
         if (isAbilityBlocked()) {
-            displayAbilityBlockedMessage();
             return;
         }
         
@@ -33,44 +34,24 @@ public class Luna extends GameCharacter {
         }
     }
     
-    // Validates sabotage target
     private boolean isValidTarget(GameCharacter target) {
         return isValidBasicTarget(target) && target != this; 
     }
     
-    // Executes sabotage action
     private void executeSabotageAction(GameCharacter target, MoonlightsGambit game) {
         if (isTargetProtected(target)) {
-            displayTargetProtectedMessage(target);
             return;
         }
         
-        performSuccessfulSabotage(target, game);
+        game.recordSabotage(target);
     }
     
     private boolean isTargetProtected(GameCharacter target) {
         return target.isBlessed();
     }
     
-    private void performSuccessfulSabotage(GameCharacter target, MoonlightsGambit game) {
-        displaySabotageMessage(target);
-        game.recordSabotage(target);
-    }
-    
     private void displaySabotageMessage(GameCharacter target) {
         GameUtils.typeText(String.format("[SABOTAGE] %s weaves chaos around %s!", getName(), target.getName()), TEXT_DELAY_MS);
-    }
-    
-    private void displayAbilityBlockedMessage() {
-        GameUtils.typeText(String.format("[BLOCKED] %s's ability is blocked! Cannot sabotage.", getName()), TEXT_DELAY_MS);
-    }
-    
-    private void displayTargetProtectedMessage(GameCharacter target) {
-        GameUtils.typeText(String.format("[BLOCKED] %s is protected by divine light! Sabotage fails!", target.getName()), TEXT_DELAY_MS);
-    }
-    
-    private void displaySelfSabotageMessage() {
-        GameUtils.typeText(String.format("[ERROR] %s cannot sabotage herself!", getName()), TEXT_DELAY_MS);
     }
     
     private void displayInvalidTargetMessage(GameCharacter target) {
@@ -79,7 +60,7 @@ public class Luna extends GameCharacter {
         } else if (!target.isAlive()) {
             GameUtils.typeText(String.format("[ERROR] Cannot sabotage %s - target is not alive", target.getName()), TEXT_DELAY_MS);
         } else if (target == this) {
-            displaySelfSabotageMessage();
+            GameUtils.typeText(String.format("[ERROR] %s cannot sabotage herself!", getName()), TEXT_DELAY_MS);
         }
     }
     
