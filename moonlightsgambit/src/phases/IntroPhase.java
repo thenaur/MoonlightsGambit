@@ -14,15 +14,14 @@ public class IntroPhase implements GamePhase {
         game.displayCycleHeader(1);
     }
     
-    // Shows game title with formatted header
     private void displayGameTitle() {
         GameUtils.clearScreen();
-        System.out.println("*".repeat(36));
-        System.out.println("         MOONLIGHT'S GAMBIT");
-        System.out.println("*".repeat(36));
+        GameUtils.typeText("*".repeat(36), 10);
+        GameUtils.typeText("         MOONLIGHT'S GAMBIT", 80);
+        GameUtils.typeText("*".repeat(36), 10);
         GameUtils.ENTERKey();
     }
-    
+
     // Displays welcome message and game story
     private void displayWelcomeMessage() {
         GameUtils.clearScreen();
@@ -48,3 +47,4 @@ public class IntroPhase implements GamePhase {
         return "Introduction";
     }
 }
+
