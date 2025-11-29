@@ -23,7 +23,6 @@ public class DawnPhase implements GamePhase {
         processNightEvents(game);
         displaySurvivalStatus(game);
         displayRemainingPlayers(game);
-        
         GameUtils.ENTERKey();
     }
     
@@ -58,25 +57,9 @@ public class DawnPhase implements GamePhase {
         killedPlayer.setAlive(false);
     }
     
-    
-    // Handles scenario where no players die
     private void handleNoDeaths(MoonlightsGambit game) {
-        // Check if there was a hunt attempt that was blocked by protection
-        GameCharacter huntTarget = game.getHuntTarget();
-
-        if (huntTarget != null) {
-            if (huntTarget.isBlessed()) {
-                System.out.println("[SURVIVAL] Miraculously, no one perished in the night!");
-                System.out.println("The Reaper tried to hunt someone, but the chosen player was protected by divine light.");
-                System.out.println("   The academy remains unscathed... for now.");
-            } else {
-                System.out.println("[SURVIVAL] Miraculously, no one perished in the night!");
-                System.out.println("   The academy remains unscathed... for now.");
-            }
-        } else {
-            System.out.println("[SURVIVAL] Miraculously, no one perished in the night!");
-            System.out.println("   The academy remains unscathed... for now.");
-        }
+        System.out.println("[SURVIVAL] Miraculously, no one perished in the night!");
+        System.out.println("The academy remains unscathed... for now.");
     }
     
     //Displays survival status message
@@ -102,4 +85,3 @@ public class DawnPhase implements GamePhase {
         return "Dawn Phase";
     }
 }
-
