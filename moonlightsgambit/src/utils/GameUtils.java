@@ -9,7 +9,7 @@ public class GameUtils {
         throw new IllegalStateException("Utility class - cannot be instantiated");
     }
     
-    // Constants for consistent messaging throughout the game - DRY principle
+    // Constants for consistent messaging throughout the game
     public static final String FATE_VICTORIOUS = "W, VICTORIOUS";
     public static final String FATE_DEFEATED = "L, DEFEATED";
     public static final String GAME_CONCLUDED = "                  GAME CONCLUDED";
@@ -138,6 +138,7 @@ public class GameUtils {
         }
     }
 }
+
 
 
 
