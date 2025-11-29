@@ -53,7 +53,7 @@ public class MoonPhase implements GamePhase {
         displayPlayerTurnInfo(player);
 
         if (player.isAbilityBlocked()) {
-            System.out.println("[BLOCKED] ABILITY BLOCKED BY THE SABOTEUR – cannot act!");
+            System.out.println("[BLOCKED] ABILITY BLOCKED BY THE SABOTEUR - cannot act!");
         }
 
         System.out.println(player.getLoreDescription());
@@ -121,3 +121,4 @@ public class MoonPhase implements GamePhase {
         return "Moon Phase";
     }
 }
+
