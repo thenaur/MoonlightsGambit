@@ -106,14 +106,14 @@ public class GameUtils {
             String rawInput = scanner.nextLine().trim();
 
             if (isInputEmpty(rawInput)) {
-                displayInputError("Input cannot be empty – try again.");
+                displayInputError("Input cannot be empty - try again.");
                 continue;
             }
 
             try {
                 return parseAndValidateInput(rawInput, min, max);
             } catch (NumberFormatException ex) {
-                displayInputError("Not a valid number – try again.");
+                displayInputError("Not a valid number - try again.");
             }
         }
     }
@@ -138,5 +138,6 @@ public class GameUtils {
         }
     }
 }
+
 
 
