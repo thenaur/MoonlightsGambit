@@ -30,7 +30,7 @@ public class GameSetup implements GamePhase {
     private void displaySetupHeader() {
         GameUtils.clearScreen();
         System.out.println("*".repeat(50));
-        System.out.println("             PHASE 1: ROLE ASSIGNMENT");
+        System.out.println("                 ROLE ASSIGNMENT!");
         System.out.println("*".repeat(50));
         GameUtils.ENTERKey();
     }
@@ -146,3 +146,4 @@ public class GameSetup implements GamePhase {
         return "Game Setup";
     }
 }
+
