@@ -88,5 +88,3 @@ public class Elara extends GameCharacter {
     public void resetNightAction() { 
     }
 }
-
-
