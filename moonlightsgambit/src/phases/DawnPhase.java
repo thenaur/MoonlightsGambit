@@ -21,7 +21,6 @@ public class DawnPhase implements GamePhase {
 
         displayDawnPhaseHeader();
         processNightEvents(game);
-        displaySurvivalStatus(game);
         displayRemainingPlayers(game);
         GameUtils.ENTERKey();
     }
@@ -61,11 +60,7 @@ public class DawnPhase implements GamePhase {
         System.out.println("[SURVIVAL] Miraculously, no one perished in the night!");
         System.out.println("The academy remains unscathed... for now.");
     }
-    
-    //Displays survival status message
-    private void displaySurvivalStatus(MoonlightsGambit game) {
-    }
-    
+        
     // Shows all remaining players with status
     private void displayRemainingPlayers(MoonlightsGambit game) {
         System.out.println("\nRemaining Champions:");
@@ -85,3 +80,4 @@ public class DawnPhase implements GamePhase {
         return "Dawn Phase";
     }
 }
+
