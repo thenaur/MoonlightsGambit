@@ -1,12 +1,11 @@
 package moonlightsgambit;
 
-import java.util.*;
 import moonlightsgambit.characters.*;
 import moonlightsgambit.enums.Team;
 import moonlightsgambit.interfaces.GamePhase;
 import moonlightsgambit.phases.*;
 import moonlightsgambit.utils.GameUtils;
-
+import java.util.*;
 // Main game controller managing game state and flow
 public class MoonlightsGambit {
     private GameCharacter[] players = new GameCharacter[4];
@@ -15,7 +14,7 @@ public class MoonlightsGambit {
     private GameCharacter huntTarget;
     private final List<GameCharacter> playersToSabotageNextRound = new ArrayList<>();
     
-    // Constants for game configuration
+    // Constant for game configuration
     private static final int MAX_PLAYERS = 4;
 
     // Resets game to initial state
@@ -23,7 +22,6 @@ public class MoonlightsGambit {
         this.players = new GameCharacter[MAX_PLAYERS];
         this.gameOver = false;
         this.specialEnding = false;
-        this.huntTarget = null;
         this.playersToSabotageNextRound.clear();
     }
 
@@ -31,7 +29,6 @@ public class MoonlightsGambit {
     public void startGame() {
         resetGame();
         
-        // Array of game phases demonstrating polymorphism through GamePhase interface
         GamePhase[] phases = initializeGamePhases();
 
         int cycle = 1;
@@ -72,7 +69,6 @@ public class MoonlightsGambit {
         };
     }
 
-    // Shows cycle header
     public void displayCycleHeader(int cycle) {
         GameUtils.clearScreen();
         System.out.printf("\n--- CYCLE %d ---%n", cycle);
@@ -109,14 +105,6 @@ public class MoonlightsGambit {
         return cycle > 1 && (phase instanceof GameSetup || phase instanceof IntroPhase);
     }
     
-    public GameCharacter getHuntTarget() {
-        return huntTarget;
-    }
-
-    public void setHuntTarget(GameCharacter huntTarget) {
-        this.huntTarget = huntTarget;
-    }
-
     public List<GameCharacter> getAlivePlayers() {
         List<GameCharacter> alive = new ArrayList<>();
         for (GameCharacter player : players) {
@@ -128,14 +116,14 @@ public class MoonlightsGambit {
     }
 
     public GameCharacter[] getPlayers() { 
-        return Arrays.copyOf(players, players.length); // Defensive copy
+        return Arrays.copyOf(players, players.length);
     }
     
     public void setPlayers(GameCharacter[] players) { 
         if (players == null || players.length != MAX_PLAYERS) {
             throw new IllegalArgumentException("Players array must be non-null and length " + MAX_PLAYERS);
         }
-        this.players = Arrays.copyOf(players, players.length); // Defensive copy
+        this.players = Arrays.copyOf(players, players.length);
     }
     
     public boolean isGameOver() { 
@@ -168,15 +156,14 @@ public class MoonlightsGambit {
         playersToSabotageNextRound.clear();
     }
 
-    // Records game actions
     public void recordHunt(GameCharacter target) { 
         this.huntTarget = target; 
     }
-   
+    
     public void recordSabotage(GameCharacter target) {
         playersToSabotageNextRound.add(target); 
     }
-    
+
     // Processes night actions and determines outcomes
     public GameCharacter processNightActions() {
         if (huntTarget != null && !huntTarget.isBlessed()) {
@@ -185,7 +172,6 @@ public class MoonlightsGambit {
         return null;
     }
 
-    // Resets night-specific actions
     private void resetNightActions() {
         for (GameCharacter player : players) {
             if (player != null) {
@@ -236,18 +222,16 @@ public class MoonlightsGambit {
         specialEnding = true;
     }
 
-    // Handles victory when final two players are on same team
     private void handleSameTeamVictory(GameCharacter player1, GameCharacter player2) {
         if (player1.getTeam() == Team.GOOD) {
-            moonlightsgambit.phases.NarrativeEnding.printGoodEnding(player1, player2);
+            NarrativeEnding.printGoodEnding(player1, player2);
         } else { 
-            moonlightsgambit.phases.NarrativeEnding.printEvilEnding(player1, player2);
+            NarrativeEnding.printEvilEnding(player1, player2);
         }
         gameOver = true;
         specialEnding = true;
     }
 
-    // Shows short final results when game ends normally
     private void displayShortFinalResults() {
         List<GameCharacter> alivePlayers = getAlivePlayers();
         Team winningTeam = determineWinningTeam(alivePlayers);
@@ -258,7 +242,6 @@ public class MoonlightsGambit {
         displayFateConclusion();
     }
 
-    // Determines winning team based on alive players
     private Team determineWinningTeam(List<GameCharacter> alivePlayers) {
         if (alivePlayers.isEmpty()) {
             return null;
@@ -266,7 +249,6 @@ public class MoonlightsGambit {
         return alivePlayers.get(0).getTeam();
     }
 
-    // Shows game conclusion header
     private void displayGameConclusionHeader() {
         GameUtils.clearScreen();
         System.out.println("=".repeat(50));
@@ -274,7 +256,6 @@ public class MoonlightsGambit {
         System.out.println("=".repeat(50));
     }
 
-    // Shows results for all players
     private void displayPlayerResults(Team winningTeam) {
         for (GameCharacter player : players) {
             if (player == null) continue;
@@ -326,18 +307,6 @@ public class MoonlightsGambit {
         return "Unknown";
     }
     
-    // Additional utility methods for game flow
-    public int getAlivePlayerCount() {
-        return getAlivePlayers().size();
-    }
-    
-    //Checks if voting phase should be skipped (only 2 players alive)
-    public boolean shouldSkipVotingPhase() {
-        return getAlivePlayerCount() < MIN_PLAYERS_FOR_VOTING;
-    }
-
-      
-   // Shows friendship remains message
     public void displayFriendshipRemains() {
         System.out.println("=".repeat(52));
         System.out.println("          FRIENDSHIP SURVIVES THE DARKNESS");
@@ -346,7 +315,6 @@ public class MoonlightsGambit {
         System.out.println("Their bond remains, though forever changed...");
     }
 
-    // Shows bonds broken message
     public void displayBondsBroken() {
         System.out.println("=".repeat(50));
         System.out.println("            BONDS SHATTER IN THE NIGHT");
@@ -355,7 +323,6 @@ public class MoonlightsGambit {
         System.out.println("The final choice leads to confrontation...");
     }
 
-    // Shows destiny draw game conclusion
     public void displayDestinyDrawGameConcluded(Team winningTeam) {
         displayGameConclusionHeader();
         displayPlayerResults(winningTeam);
@@ -363,4 +330,3 @@ public class MoonlightsGambit {
         displayFateConclusion();
     }
 }
-
