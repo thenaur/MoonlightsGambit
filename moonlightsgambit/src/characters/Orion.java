@@ -48,7 +48,7 @@ public class Orion extends GameCharacter {
     }
     
     private void displayAbilityBlockedMessage() {
-        GameUtils.typeText(String.format("[BLOCKED] %s's ability is blocked by the SABOTEUR! Cannot hunt.", getName()), TEXT_DELAY_MS);
+        GameUtils.typeText(String.format("[HUNT] %s marks %s for the reaping!", getName(), target.getName()), TEXT_DELAY_MS);
     }
     
     private void displayInvalidTargetMessage(GameCharacter target) {
@@ -84,3 +84,4 @@ public class Orion extends GameCharacter {
     public void resetNightAction() { 
     }
 }
+
