@@ -11,6 +11,7 @@ public class IntroPhase implements GamePhase {
     public void executePhase(MoonlightsGambit game) {
         displayGameTitle();
         displayWelcomeMessage();
+        game.displayCycleHeader(1);
     }
     
     // Shows game title with formatted header
@@ -47,4 +48,3 @@ public class IntroPhase implements GamePhase {
         return "Introduction";
     }
 }
-
