@@ -49,11 +49,7 @@ public class DestinyDraw {
                 if (player1Score >= WINNING_SCORE || player2Score >= WINNING_SCORE) {
                     break;
                 }
-
-                // Use safe input check instead of direct scanner.nextLine()
-                if (scanner.hasNextLine()) {
-                    scanner.nextLine();
-                }
+                
                 GameUtils.clearScreen();
             }
 
@@ -298,4 +294,5 @@ public class DestinyDraw {
         return team == Team.GOOD ? "The Light" : "The Shadows";
     }
 }
+
 
