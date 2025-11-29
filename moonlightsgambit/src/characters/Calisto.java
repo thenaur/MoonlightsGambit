@@ -37,7 +37,6 @@ public class Calisto extends GameCharacter {
     private void executeInvestigation(GameCharacter target, MoonlightsGambit game) {
         displayInvestigationStart(target);
         displayInvestigationResult(target);
-        game.recordInvestigation(target);
     }
  
     private void displayInvestigationStart(GameCharacter target) {
@@ -84,4 +83,5 @@ public class Calisto extends GameCharacter {
     public void resetNightAction() { 
     }
 }
+
 
