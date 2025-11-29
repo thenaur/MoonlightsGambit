@@ -129,10 +129,4 @@ public abstract class GameCharacter {
             throw new IllegalArgumentException("Game instance cannot be null");
         }
     }
-
-    protected void validateCharacterName() {
-        if (getName() == null || getName().trim().isEmpty()) {
-            throw new IllegalStateException("Character name must be specified");
-        }
-    }
 }
