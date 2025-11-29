@@ -208,8 +208,10 @@ public class VotingPhase implements GamePhase {
     private void handleSameTeamVictory(MoonlightsGambit game, GameCharacter player1, GameCharacter player2) {
         if (player1.getTeam() == Team.GOOD) {
             NarrativeEnding.printGoodEnding(player1, player2);
+            GameUtils.ENTERKey();
         } else {
             NarrativeEnding.printEvilEnding(player1, player2);
+            GameUtils.ENTERKey();
         }
         game.setGameOver(true);
     }
@@ -457,4 +459,3 @@ public class VotingPhase implements GamePhase {
         return "Voting Phase";
     }
 }
-
