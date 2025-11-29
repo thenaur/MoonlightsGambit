@@ -70,7 +70,7 @@ public class VotingPhase implements GamePhase {
 
         GameCharacter target = getValidVoteTarget(voter, alivePlayers);
         votes.put(target, votes.getOrDefault(target, 0) + 1);
-        System.out.println("Vote recorded.");
+        System.out.println("\nVote recorded.");
         GameUtils.ENTERKey();
     }
 
@@ -135,6 +135,7 @@ public class VotingPhase implements GamePhase {
         System.out.println("\n[TIE] The vote ends in a stalemate!");
         System.out.println("   No one is eliminated this round...");
         System.out.println("   The game continues with current players!");
+        GameUtils.ENTERKey();
     }
 
     // Determines which player is eliminated based on votes
@@ -461,4 +462,3 @@ private GameCharacter determineEliminated(Map<GameCharacter, Integer> votes, Lis
         return "Voting Phase";
     }
 }
-
