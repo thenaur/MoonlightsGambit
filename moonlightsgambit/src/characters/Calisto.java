@@ -49,14 +49,14 @@ public class Calisto extends GameCharacter {
     }
 
     private void displayAbilityBlockedMessage() {
-        GameUtils.typeText(String.format("[BLOCKED] %s's ability is blocked by the SABOTEUR! Cannot investigate.", getName()), TEXT_DELAY_MS);
+        GameUtils.typeText(String.format("[BLOCKED] A dark fog clouds s%'s vision - the truth remains hidden!", getName()), TEXT_DELAY_MS);
     }
  
     private void displayInvalidTargetMessage(GameCharacter target) {
         if (target == null) {
             GameUtils.typeText("[ERROR] Cannot investigate - no target selected", TEXT_DELAY_MS);
         } else if (!target.isAlive()) {
-            GameUtils.typeText(String.format("[BLOCKED] A dark fog clouds s%'s vision - the truth remains hidden!", getName()), TEXT_DELAY_MS);
+            GameUtils.typeText(String.format("[ERROR] Cannot investigate %s - target is not alive", target.getName()), TEXT_DELAY_MS);
         }
     }
 
@@ -84,4 +84,5 @@ public class Calisto extends GameCharacter {
     public void resetNightAction() { 
     }
 }
+
 
