@@ -143,7 +143,7 @@ private GameCharacter determineEliminated(Map<GameCharacter, Integer> votes, Lis
     GameCharacter eliminated = null;
     boolean isTie = false;
 
-    System.out.println("Vote Count:");
+    System.out.println("\nVote Count:");
 
     for (GameCharacter player : alivePlayers) {
         int playerVotes = votes.getOrDefault(player, 0);
@@ -461,3 +461,4 @@ private GameCharacter determineEliminated(Map<GameCharacter, Integer> votes, Lis
         return "Voting Phase";
     }
 }
+
