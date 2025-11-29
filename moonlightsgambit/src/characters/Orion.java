@@ -25,7 +25,6 @@ public class Orion extends GameCharacter {
         displayHuntMessage(target);
         
         if (isAbilityBlocked()) {
-            // No additional message - keep it mysterious!
             return;
         }
         
@@ -76,3 +75,4 @@ public class Orion extends GameCharacter {
     public void resetNightAction() { 
     }
 }
+
