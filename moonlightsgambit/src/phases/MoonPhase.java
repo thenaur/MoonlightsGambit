@@ -52,9 +52,6 @@ public class MoonPhase implements GamePhase {
         GameUtils.clearScreen();
         displayPlayerTurnInfo(player);
 
-        if (player.isAbilityBlocked()) {
-            System.out.println("[BLOCKED] ABILITY BLOCKED BY THE SABOTEUR - cannot act!");
-        }
 
         System.out.println(player.getLoreDescription());
 
