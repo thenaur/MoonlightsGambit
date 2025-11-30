@@ -248,6 +248,9 @@ moonlightsgambit/
 
 ## ᯓ★ ~ Sample Output
 
+### ⋆｡° Game Introduction
+<img src="markdown/intro.gif" width="200" />
+
 ## ⋆⭒˚𖠋𖠋𖠋𖠋*.⋆ ~ Contributors
 <div align="center">⠀⠀⠀
 <table>
