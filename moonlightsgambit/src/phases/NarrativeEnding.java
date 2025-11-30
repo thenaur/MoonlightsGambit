@@ -68,7 +68,7 @@ public class NarrativeEnding {
         System.out.println("                              A WOUNDED FRIENDSHIP REMAINS");
         System.out.println("*".repeat(88));
         
-        GameUtils.typeText("\nCalisto: \"We've survived… though trust will not be so easily restored.\"", 30);
+        GameUtils.typeText("\nCalisto: \"We've survived... though trust will not be so easily restored.\"", 30);
         GameUtils.typeText("Luna: \"Chaos and order coexist for now, but nothing feels certain.\"", 30);
         GameUtils.typeText("", 30);
         GameUtils.typeText("The ancient halls of Artemia stand silent, holding their breath as moonlight filters", 30);
@@ -104,4 +104,5 @@ public class NarrativeEnding {
         System.out.println("=".repeat(50));
     }
 }
+
 
