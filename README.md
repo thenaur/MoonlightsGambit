@@ -261,10 +261,10 @@ moonlightsgambit/
 <img src="markdown/destinydraw.gif" width="600" />
 
 ### ⋆｡° Good Ending
-<img src="markdown/sampleending.gif" width="500" />
+<img src="markdown/sampleending.gif" width="800" />
 
 ### ⋆｡° Replay Option
-<img src="markdown/end.gif" width="500" />
+<img src="markdown/end.gif" width="700" />
 
 ## ⋆⭒˚𖠋𖠋𖠋𖠋*.⋆ ~ Contributors
 <div align="center">⠀⠀⠀
