@@ -252,7 +252,7 @@ moonlightsgambit/
 <img src="markdown/intro.gif" width="800" />
 
 ### ✩ Role Assignment
-<img src="markdown/intro.gif" width="500" />
+<img src="markdown/roleassignment.gif" width="500" />
 
 ## ⋆⭒˚𖠋𖠋𖠋𖠋*.⋆ ~ Contributors
 <div align="center">⠀⠀⠀
