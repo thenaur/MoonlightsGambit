@@ -251,8 +251,20 @@ moonlightsgambit/
 ### ⋆｡° Game Introduction
 <img src="markdown/intro.gif" width="800" />
 
-### ✩ Role Assignment
+### ⋆｡° Role Assignment
 <img src="markdown/roleassignment.gif" width="500" />
+
+### ⋆｡° Moon Phase Skill
+<img src="markdown/skill.gif" width="700" />
+
+### ⋆｡° Destiny Draw
+<img src="markdown/destinydraw.gif" width="600" />
+
+### ⋆｡° Good Ending
+<img src="markdown/sampleending.gif" width="500" />
+
+### ⋆｡° Replay Option
+<img src="markdown/end.gif" width="500" />
 
 ## ⋆⭒˚𖠋𖠋𖠋𖠋*.⋆ ~ Contributors
 <div align="center">⠀⠀⠀
