@@ -155,6 +155,13 @@ The final duel where the last two players alive draw numbers (1-10) and choose t
 ## 𓍢ִ໋🀦 ~ Project Structure
 ```
 moonlightsgambit/
+├── markdown/
+│   ├── destinydraw.gif
+│   ├── end.gif
+│   ├── intro.gif
+│   ├── roleassignment.gif
+│   ├── sampleending.gif
+│   └── skill.gif
 ├── src/
 |   ├── enums/
 │   │     └── Team.java                   – GOOD / EVIL constants
