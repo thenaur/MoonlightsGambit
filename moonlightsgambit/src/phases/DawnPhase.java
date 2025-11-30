@@ -11,20 +11,18 @@ public class DawnPhase implements GamePhase {
     
     @Override
     public void executePhase(MoonlightsGambit game) {
-        List<GameCharacter> alivePlayers = game.getAlivePlayers();
-        // Final two players check
-        if (alivePlayers.size() == 2) {
-            System.out.println("\n>>> Only 2 players remain! The game will proceed to final showdown...");
-            GameUtils.ENTERKey();
-            return;
-        }
-
         displayDawnPhaseHeader();
         processNightEvents(game);
         displayRemainingPlayers(game);
         GameUtils.ENTERKey();
+        GameUtils.clearScreen();
+
+        // Check for final two players AFTER processing deaths
+        List<GameCharacter> alivePlayers = game.getAlivePlayers();
+        if (alivePlayers.size() == 2) {
+            return;
+        }
     }
-    
 
     // Internal display logic for dawn phase
     private void displayDawnPhaseHeader() {
