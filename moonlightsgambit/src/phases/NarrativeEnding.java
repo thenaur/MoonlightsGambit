@@ -51,7 +51,7 @@ public class NarrativeEnding {
         System.out.println("*".repeat(80));
 
         GameUtils.typeText("\nElara: \"We've survived, and yet the night feels heavier than before.\"", 30);
-        GameUtils.typeText("Orion: \"Fate has spared us both… and shadows still linger between us.\"", 30);
+        GameUtils.typeText("Orion: \"Fate has spared us both... and shadows still linger between us.\"", 30);
         GameUtils.typeText("", 30);
         GameUtils.typeText("In the silent halls of Artemia, two figures stand apart yet unharmed.", 30);
         GameUtils.typeText("Neither light nor shadow claims total victory, and the night holds its breath.", 30);
@@ -104,3 +104,4 @@ public class NarrativeEnding {
         System.out.println("=".repeat(50));
     }
 }
+
