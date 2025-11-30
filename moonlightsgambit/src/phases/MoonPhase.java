@@ -12,15 +12,6 @@ public class MoonPhase implements GamePhase {
 
     @Override
     public void executePhase(MoonlightsGambit game) {
-        List<GameCharacter> alive = game.getAlivePlayers();
-
-        // Check for final two players scenario
-        if (alive.size() == 2) {
-            System.out.println("\n>>> Only 2 players remain! Proceeding to final showdown...");
-            GameUtils.ENTERKey();
-            return;
-        }
-
         displayMoonPhaseHeader();
         executePlayerActions(game);
         displayPhaseConclusion();
