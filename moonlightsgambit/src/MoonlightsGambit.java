@@ -216,10 +216,10 @@ public class MoonlightsGambit {
             handleSameTeamVictory(player1, player2);
             return;
         }
-        
-        // Cross-team final two will be handled by VotingPhase
-        gameOver = true;
-        specialEnding = true;
+    
+        // Create and execute voting phase for the final showdown
+        VotingPhase votingPhase = new VotingPhase();
+        votingPhase.executePhase(this);
     }
 
     private void handleSameTeamVictory(GameCharacter player1, GameCharacter player2) {
