@@ -17,6 +17,7 @@ public abstract class GameCharacter {
     private static final String NAME_VALIDATION_MSG = "Character name cannot be null or empty";
     private static final String TEAM_VALIDATION_MSG = "Team cannot be null";
 
+    // Instance variables
     private String name;
     private boolean isAlive;
     private Team team;
@@ -24,6 +25,7 @@ public abstract class GameCharacter {
     private boolean isBlessed;
     private int order; 
 
+    // Constructor
     public GameCharacter(String name, Team team) {
         validateConstructorParameters(name, team);
         this.name = name.trim();
@@ -34,6 +36,7 @@ public abstract class GameCharacter {
         this.order = 0;
     }
 
+    // Validation for constructor parameters
     private void validateConstructorParameters(String name, Team team) {
         if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException(NAME_VALIDATION_MSG);
@@ -43,7 +46,7 @@ public abstract class GameCharacter {
         }
     }
 
-    // ===== TEMPLATE METHOD PATTERN =====
+    //Template method for performing night actions
     public void performAction(GameCharacter target, MoonlightsGambit game) {
         validateGameInstance(game);
         
@@ -61,12 +64,12 @@ public abstract class GameCharacter {
         executeAction(target, game);
     }
     
-    // ===== ABSTRACT METHODS =====
+    //Abstract methods for role-specific actions
     protected abstract void executeAction(GameCharacter target, MoonlightsGambit game);
     protected abstract void displayActionMessage(GameCharacter target);
     protected abstract void displayAbilityBlockedMessage();
     
-    // ===== PROTECTED VALIDATION METHODS =====
+    //Protected helper methods
     protected boolean validateTarget(GameCharacter target) {
         return target != null && target.isAlive();
     }
@@ -85,14 +88,10 @@ public abstract class GameCharacter {
         }
     }
     
-    // ===== NEW METHODS TO FIX COMPILATION ERRORS =====
-    
-    // Called from MoonlightsGambit.java line 178
     public void resetNightAction() {
         // Reset night-specific statuses
         this.abilityBlocked = false;
         this.isBlessed = false;
-        // Note: DO NOT reset isAlive here - that's permanent
     }
     
     // Called from GameSetup.java line 60
@@ -104,11 +103,12 @@ public abstract class GameCharacter {
         return this.order;
     }
     
-    // ===== GETTERS & SETTERS =====
+    //Getter and Setter methods
     public String getName() { 
         return name; 
     }
  
+    //Setter with validation
     public void setName(String name) { 
         if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException(NAME_VALIDATION_MSG);
@@ -151,7 +151,7 @@ public abstract class GameCharacter {
         isBlessed = blessed; 
     }
 
-    // ===== ABSTRACT METHODS FOR CHARACTER INFO =====
+    //Abstract methods for role-specific info
     public abstract String getRoleDescription();
     public abstract String getActionPrompt();
     public abstract String getLoreDescription();
