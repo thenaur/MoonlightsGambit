@@ -8,83 +8,62 @@ import moonlightsgambit.utils.GameUtils;
 public class Elara extends GameCharacter {
 
     private static final String ROLE_NAME = "Elara - The Believer";
-    private static final String ROLE_DESCRIPTION = "The Believer (Light Team)";
+    private static final String ROLE_DESCRIPTION = "The Believer (Good Team)";
     private static final String LORE_DESCRIPTION = "Her faith shines brighter than the moon.";
     private static final String ACTION_PROMPT = "Choose a player to protect with divine light (0 to protect yourself): ";
-    private static final int TEXT_DELAY_MS = 30;
 
     public Elara(String name) {
         super(name, Team.GOOD);
     }
-
+    
     @Override
     public void performAction(GameCharacter target, MoonlightsGambit game) {
         validateGameInstance(game);
-        
+    
+        // Check if Elara is ability blocked (sabotaged THIS round)
         if (isAbilityBlocked()) {
+            // Show that she's trying but gets blocked
+            GameUtils.typeText(String.format("[PROTECT] %s calls upon the divine light...", getName()), TEXT_DELAY_MS);
             displayAbilityBlockedMessage();
+            return; // Stop here - blessing fails
+        }
+    
+        if (!validateTarget(target)) {
+            displayInvalidTargetMessage(target);
             return;
         }
-        
-        if (isValidBasicTarget(target)) {
-            executeProtectionAction(target, game);
-        } else {
-            displayInvalidTargetMessage(target);
-        }
-    }
-// Executes protection action    
-    private void executeProtectionAction(GameCharacter target, MoonlightsGambit game) {
-        displayProtectionMessage(target);
-        applyDivineProtection(target);
+    
+        // Normal protection flow
+        displayActionMessage(target);
+        executeAction(target, game);
     }
     
-    private void displayProtectionMessage(GameCharacter target) {
-        String protectionTarget = getProtectionTargetName(target);
-        GameUtils.typeText(String.format("[PROTECT] %s channels divine light to protect %s!", getName(), protectionTarget), TEXT_DELAY_MS);
-    }
-
-    private String getProtectionTargetName(GameCharacter target) {
-        return (target == this) ? "herself" : target.getName();
+    @Override
+    protected boolean validateTarget(GameCharacter target) {
+        // Elara can target herself
+        return target != null && target.isAlive();
     }
     
-    private void applyDivineProtection(GameCharacter target) {
+    @Override
+    protected void executeAction(GameCharacter target, MoonlightsGambit game) {
         target.setBlessed(true);
     }
-
-    private void displayAbilityBlockedMessage() {
-        GameUtils.typeText(String.format("[BLOCKED] A shadow disrupts %s's prayer - the protection fails!", getName()), TEXT_DELAY_MS);
-    }
     
-    private void displayInvalidTargetMessage(GameCharacter target) {
-        if (target == null) {
-            GameUtils.typeText("[ERROR] Cannot protect - no target selected", TEXT_DELAY_MS);
-        } else if (!target.isAlive()) {
-            GameUtils.typeText(String.format("[ERROR] Cannot protect %s - target is not alive", target.getName()), TEXT_DELAY_MS);
-        }
-    }
-
     @Override
-    public String getRoleDescription() {
-        return ROLE_DESCRIPTION;
-    }
-
-    @Override
-    public String getActionPrompt() {
-        return ACTION_PROMPT;
+    protected void displayActionMessage(GameCharacter target) {
+        String protectionTarget = (target == this) ? "herself" : target.getName();
+        GameUtils.typeText(String.format("[PROTECT] %s channels divine light to protect %s!", 
+                          getName(), protectionTarget), TEXT_DELAY_MS);
     }
     
     @Override
-    public String getLoreDescription() {
-        return LORE_DESCRIPTION;
+    protected void displayAbilityBlockedMessage() {
+        GameUtils.typeText(String.format("[BLOCKED] A shadow disrupts %s's prayer - the blessing fails to hold!", 
+                          getName()), TEXT_DELAY_MS);
     }
-
-    @Override
-    public String getRoleName() {
-        return ROLE_NAME;
-    }
-
-    @Override
-    public void resetNightAction() { 
-    }
+    
+    @Override public String getRoleDescription() { return ROLE_DESCRIPTION; }
+    @Override public String getActionPrompt() { return ACTION_PROMPT; }
+    @Override public String getLoreDescription() { return LORE_DESCRIPTION; }
+    @Override public String getRoleName() { return ROLE_NAME; }
 }
-
