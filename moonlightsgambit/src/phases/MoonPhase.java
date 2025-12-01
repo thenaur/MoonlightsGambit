@@ -84,11 +84,15 @@ public class MoonPhase implements GamePhase {
 
     // Reads and validates target choice
     private int readTargetChoice(GameCharacter actor, List<GameCharacter> list) {
-        if (actor == null) return 0;
+        if (actor == null || list.isEmpty()) {
+            return 0;
+        }
+
         int min = (actor instanceof Elara) ? 0 : 1;
         int max = (actor instanceof Elara) ? list.size() - 1 : list.size();
-        return readInt(min, max, actor.getActionPrompt())
-             - (actor instanceof Elara ? 0 : 1);    
+
+        int userChoice = readInt(min, max, actor.getActionPrompt());
+        return userChoice - (actor instanceof Elara ? 0 : 1);
     }
 
     // Safely reads integer input
