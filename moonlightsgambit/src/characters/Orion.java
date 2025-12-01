@@ -12,6 +12,7 @@ public class Orion extends GameCharacter {
     private static final String LORE_DESCRIPTION = "His touch brings silence to the night.";
     private static final String ACTION_PROMPT = "Choose a player to hunt under the moonlight: ";
     
+    // Constructor
     public Orion(String name) {
         super(name, Team.EVIL);
     }
@@ -38,6 +39,7 @@ public class Orion extends GameCharacter {
         // Silent failure if target is blessed
     }
     
+    // Validate target (cannot target self)
     @Override
     protected void executeAction(GameCharacter target, MoonlightsGambit game) {
         // Moved logic to performAction for clarity
@@ -55,6 +57,7 @@ public class Orion extends GameCharacter {
                           getName()), TEXT_DELAY_MS);
     }
     
+    //Abstract method implementations for role details
     @Override public String getRoleDescription() { return ROLE_DESCRIPTION; }
     @Override public String getActionPrompt() { return ACTION_PROMPT; }
     @Override public String getLoreDescription() { return LORE_DESCRIPTION; }
