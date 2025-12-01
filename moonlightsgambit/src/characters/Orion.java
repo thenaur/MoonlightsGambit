@@ -8,10 +8,9 @@ import moonlightsgambit.utils.GameUtils;
 public class Orion extends GameCharacter {
     
     private static final String ROLE_NAME = "Orion - The Reaper";
-    private static final String ROLE_DESCRIPTION = "The Reaper (Shadows Team)";
+    private static final String ROLE_DESCRIPTION = "The Reaper (Evil Team)";
     private static final String LORE_DESCRIPTION = "His touch brings silence to the night.";
     private static final String ACTION_PROMPT = "Choose a player to hunt under the moonlight: ";
-    private static final int TEXT_DELAY_MS = 30;
     
     public Orion(String name) {
         super(name, Team.EVIL);
@@ -21,58 +20,43 @@ public class Orion extends GameCharacter {
     public void performAction(GameCharacter target, MoonlightsGambit game) {
         validateGameInstance(game);
         
-        // ALWAYS show hunt attempt first
-        displayHuntMessage(target);
-        
-        if (isAbilityBlocked()) {
+        if (!validateTarget(target)) {
+            displayInvalidTargetMessage(target);
             return;
         }
         
-        if (isValidBasicTarget(target)) {
-            recordHuntAction(target, game);
-        } else {
-            displayInvalidTargetMessage(target);
+        displayActionMessage(target);
+        
+        if (isAbilityBlocked()) {
+            displayAbilityBlockedMessage();
+            return;
         }
-    }
-    
-    private void displayHuntMessage(GameCharacter target) {
-        GameUtils.typeText(String.format("[HUNT] %s marks %s for the reaping!", getName(), target.getName()), TEXT_DELAY_MS);
-    }
-    
-    private void recordHuntAction(GameCharacter target, MoonlightsGambit game) {
-        game.recordHunt(target);
-    }
-    
-    private void displayInvalidTargetMessage(GameCharacter target) {
-        if (target == null) {
-            GameUtils.typeText("[ERROR] Cannot hunt - no target selected", TEXT_DELAY_MS);
-        } else if (!target.isAlive()) {
-            GameUtils.typeText(String.format("[ERROR] Cannot hunt %s - target is not alive", target.getName()), TEXT_DELAY_MS);
+        
+        if (!target.isBlessed()) {
+            game.recordHunt(target);
         }
+        // Silent failure if target is blessed
     }
     
     @Override
-    public String getRoleDescription() {
-        return ROLE_DESCRIPTION;
+    protected void executeAction(GameCharacter target, MoonlightsGambit game) {
+        // Moved logic to performAction for clarity
     }
     
     @Override
-    public String getActionPrompt() {
-        return ACTION_PROMPT;
+    protected void displayActionMessage(GameCharacter target) {
+        GameUtils.typeText(String.format("[HUNT] %s marks %s for the reaping!", 
+                          getName(), target.getName()), TEXT_DELAY_MS);
     }
     
     @Override
-    public String getLoreDescription() {
-        return LORE_DESCRIPTION;
+    protected void displayAbilityBlockedMessage() {
+        GameUtils.typeText(String.format("[BLOCKED] A shadow disrupts %s's focus - the hunt fails!", 
+                          getName()), TEXT_DELAY_MS);
     }
     
-    @Override
-    public String getRoleName() {
-        return ROLE_NAME;
-    }
-    
-    @Override
-    public void resetNightAction() { 
-    }
+    @Override public String getRoleDescription() { return ROLE_DESCRIPTION; }
+    @Override public String getActionPrompt() { return ACTION_PROMPT; }
+    @Override public String getLoreDescription() { return LORE_DESCRIPTION; }
+    @Override public String getRoleName() { return ROLE_NAME; }
 }
-
