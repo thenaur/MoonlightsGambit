@@ -8,7 +8,7 @@ import moonlightsgambit.utils.GameUtils;
 public class NarrativeEnding {
 
     // Shows evil team victory narrative
-    public static void printEvilEnding(GameCharacter a, GameCharacter b) {
+    public static void printEvilEnding(GameCharacter player1, GameCharacter player2) {
         GameUtils.clearScreen();
         System.out.println("*".repeat(180));
         System.out.println("                                                                                 EVIL TEAM VICTORY!");
@@ -51,7 +51,7 @@ public class NarrativeEnding {
         System.out.println("*".repeat(80));
 
         GameUtils.typeText("\nElara: \"We've survived, and yet the night feels heavier than before.\"", 30);
-        GameUtils.typeText("Orion: \"Fate has spared us both... and shadows still linger between us.\"", 30);
+        GameUtils.typeText("Orion: \"Fate has spared us both… and shadows still linger between us.\"", 30);
         GameUtils.typeText("", 30);
         GameUtils.typeText("In the silent halls of Artemia, two figures stand apart yet unharmed.", 30);
         GameUtils.typeText("Neither light nor shadow claims total victory, and the night holds its breath.", 30);
@@ -68,7 +68,7 @@ public class NarrativeEnding {
         System.out.println("                              A WOUNDED FRIENDSHIP REMAINS");
         System.out.println("*".repeat(88));
         
-        GameUtils.typeText("\nCalisto: \"We've survived... though trust will not be so easily restored.\"", 30);
+        GameUtils.typeText("\nCalisto: \"We've survived… though trust will not be so easily restored.\"", 30);
         GameUtils.typeText("Luna: \"Chaos and order coexist for now, but nothing feels certain.\"", 30);
         GameUtils.typeText("", 30);
         GameUtils.typeText("The ancient halls of Artemia stand silent, holding their breath as moonlight filters", 30);
@@ -104,6 +104,3 @@ public class NarrativeEnding {
         System.out.println("=".repeat(50));
     }
 }
-
-
-
