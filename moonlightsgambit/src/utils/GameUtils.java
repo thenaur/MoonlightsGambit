@@ -29,11 +29,6 @@ public class GameUtils {
         return victorious ? FATE_VICTORIOUS : FATE_DEFEATED;
     }
    
-    public static void displayPlayerResult(String playerName, String roleName, boolean victorious) {
-        String fate = getFate(victorious);
-        System.out.printf("%s as %s    %s%n", playerName, roleName, fate);
-    }
-
     // Clears console screen
     public static void clearScreen() {
         try {
