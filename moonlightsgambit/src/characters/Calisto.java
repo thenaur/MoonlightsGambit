@@ -12,10 +12,12 @@ public class Calisto extends GameCharacter {
     private static final String LORE_DESCRIPTION = "His intuition pierces through shadows.";
     private static final String ACTION_PROMPT = "Choose a player to investigate: ";
  
+    // Constructor
     public Calisto(String name) {
-        super(name, Team.GOOD);
+        super(name, Team.GOOD); 
     }
     
+    // Perform night action
     @Override
     protected void executeAction(GameCharacter target, MoonlightsGambit game) {
         GameUtils.typeText(String.format("[RESULT] %s is %s", 
@@ -34,8 +36,8 @@ public class Calisto extends GameCharacter {
                           getName()), TEXT_DELAY_MS);
     }
     
-    @Override
-    public String getRoleDescription() { return ROLE_DESCRIPTION; }
+    //Abstract method implementations for role details
+    @Override public String getRoleDescription() { return ROLE_DESCRIPTION; }
     @Override public String getActionPrompt() { return ACTION_PROMPT; }
     @Override public String getLoreDescription() { return LORE_DESCRIPTION; }
     @Override public String getRoleName() { return ROLE_NAME; }
