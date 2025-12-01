@@ -4,6 +4,7 @@ import moonlightsgambit.MoonlightsGambit;
 import moonlightsgambit.enums.Team;
 import moonlightsgambit.utils.GameUtils;
 
+// The Saboteur character - blocks abilities of other players
 public class Luna extends GameCharacter {
     
     private static final String ROLE_NAME = "Luna - The Saboteur";
@@ -11,6 +12,7 @@ public class Luna extends GameCharacter {
     private static final String LORE_DESCRIPTION = "Her chaos disrupts the natural order.";
     private static final String ACTION_PROMPT = "Choose a player to sabotage (block ability NEXT round): ";
     
+    // Constructor
     public Luna(String name) {
         super(name, Team.EVIL);
     }
@@ -31,14 +33,16 @@ public class Luna extends GameCharacter {
         game.recordSabotage(target);
     }
     
+    // Validate target (cannot target self)
     @Override
     protected boolean validateTarget(GameCharacter target) {
         return super.validateTarget(target) && target != this;
     }
     
+    // Perform night action
     @Override
     protected void executeAction(GameCharacter target, MoonlightsGambit game) {
-        // Handled in overridden performAction
+        // Moved logic to performAction for clarity
     }
     
     @Override
@@ -64,6 +68,7 @@ public class Luna extends GameCharacter {
         }
     }
     
+    //Abstract method implementations for role details
     @Override public String getRoleDescription() { return ROLE_DESCRIPTION; }
     @Override public String getActionPrompt() { return ACTION_PROMPT; }
     @Override public String getLoreDescription() { return LORE_DESCRIPTION; }
