@@ -98,7 +98,6 @@ public class DestinyDraw {
             displayScoreUpdate();
             
         } catch (Exception e) {
-            // EXCEPTION HANDLING: Continue game even if round fails
             System.out.println("\n[ERROR] Round encountered an issue. Continuing...");
         }
     }
@@ -149,9 +148,9 @@ public class DestinyDraw {
     System.out.println("Both choose to trust fate...");
 
     if (player1Draw > player2Draw) {
-        awardRoundWin(player1);  // Remove the draw values
+        awardRoundWin(player1);  
     } else if (player2Draw > player1Draw) {
-        awardRoundWin(player2);  // Remove the draw values
+        awardRoundWin(player2);  
     } else {
         handleTie();
     }
@@ -198,7 +197,7 @@ public class DestinyDraw {
     }
 
     // Awards points for round win
-    private void awardRoundWin(GameCharacter winner) {  // Remove winnerDraw and loserDraw parameters
+    private void awardRoundWin(GameCharacter winner) { 
     System.out.printf("\n~~ %s WINS THE ROUND%n", winner.getName().toUpperCase());
     System.out.println("+1 point to " + winner.getName());
     incrementScore(winner);
@@ -213,7 +212,7 @@ public class DestinyDraw {
 
     // Awards bonus points for gamble
     private void awardGambleBonus(GameCharacter winner) {
-        System.out.printf("\n~~ GAMBLE %s%n", winner == player1 || winner == player2 ? "SUCCESS" : "FAILS");
+        System.out.printf("\n~~ GAMBLE SUCCESS%n"); 
         System.out.println("+" + GAMBLE_BONUS_POINTS + " points to " + winner.getName());
         if (winner == player1) {
             player1Score += GAMBLE_BONUS_POINTS;
@@ -294,5 +293,3 @@ public class DestinyDraw {
         return team == Team.GOOD ? "The Light" : "The Shadows";
     }
 }
-
-
