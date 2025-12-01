@@ -362,7 +362,7 @@ public class VotingPhase implements GamePhase {
         System.out.println("-".repeat(70));
         GameUtils.typeText("Luna, your dearest friend has discovered the chaos you kept buried.", 30);
         GameUtils.typeText("The havoc you wreaked has led to this final moment.", 30);
-        GameUtils.typeText("\nWhat matters more - your cause or your companion?", 30);
+        GameUtils.typeText("\nWhat matters more – your cause or your companion?", 30);
         int choice = readInt(1, 2, """
                                    1. Chaos - See your mission through, no turning back now
                                    2. Peace - Remember what you were before the shadows called
@@ -462,4 +462,3 @@ public class VotingPhase implements GamePhase {
         return "Voting Phase";
     }
 }
-
