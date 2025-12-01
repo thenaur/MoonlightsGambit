@@ -215,31 +215,41 @@ moonlightsgambit/
 └── README.md       
 ```
 
-## *ੈ✩‧₊˚ ~ OOP Principles
-<div align="justify">
-            
-✦ <strong>Encapsulation</strong><br/>
-⠀All character fields (name, team, alive, abilityBlocked, isBlessed) are private with <strong>getters/setters</strong>.<br/>
-⠀Night-action state (hunt, protect, sabotage) is held inside each subclass and accessed only through the public <code>performAction()</code> contract.
-
-✦ <strong>Abstraction</strong><br/>
-⠀GamePhase interface abstracts <strong>Intro, Setup, Moon, Dawn, Voting phases</strong>; each implements <code>executePhase(MoonlightsGambit)</code> and <code>getPhaseName()</code>.<br/>
-⠀Low-level console operations (clear-screen, type-writer effect, safe-input loops) are hidden inside <code>GameUtils</code>.
-
-✦ <strong>Inheritance</strong><br/>
-⠀Abstract <code>GameCharacter</code> is the <strong>super-class</strong>; four concrete roles (<code>Elara</code>, <code>Orion</code>, <code>Calisto</code>, <code>Luna</code>) <strong>extend</strong> it and <strong>override</strong> the abstract methods <code>performAction</code>, <code>getRoleDescription</code>, <code>getLoreDescription</code>, etc. The game loop stores all players in a single <code>GameCharacter[]</code> while still accessing <strong>role-specific behaviour</strong> through the common interface.
-
-✦ <strong>Polymorphism</strong><br/>
-⠀The call <code>player.performAction(target, game)</code> dynamically dispatches to the correct subclass implementation at runtime:<br/>
-<code>Elara</code> → bless / protect<br/>
-<code>Orion</code> → hunt / kill<br/>
-<code>Calisto</code> → investigate role<br/>
-<code>Luna</code> → sabotage / block
-
-✦ <strong>Exception Handling</strong><br/>
-⠀<code>GameUtils.safeReadInt</code> wraps <code>Integer.parseInt</code> in a try-catch loop that traps <code>NumberFormatException</code> and re-prompts until the user enters a valid integer within range.<br/>
-⠀Additional try-catch blocks in <code>clearScreen()</code> and <code>typeText()</code> handle IOException / InterruptedException for runtime faults, preventing the program from crashing if the native clear-command fails or the sleep is interrupted.
-</div>
+## *ੈ✩‧₊˚ ~ OOP Principles          
+✦ <strong>Encapsulation</strong>
+    <ul>
+        <li>Character data (name, team, alive status) is private with controlled getters/setters</li>
+        <li>Night actions are managed through the public <code>performAction()</code> method only</li>
+        <li>Game state is protected from invalid modifications</li>
+    </ul>
+    
+✦ <strong>Abstraction</strong>
+    <ul>
+        <li><code>GamePhase</code> interface defines game flow without implementation details</li>
+        <li>Console operations are hidden in <code>GameUtils</code> utility class</li>
+        <li>Character roles abstracted through base <code>GameCharacter</code> class</li>
+    </ul>
+    
+✦ <strong>Inheritance</strong>
+    <ul>
+        <li><code>GameCharacter</code> abstract class provides common character functionality</li>
+        <li>Four character classes extend it with unique abilities</li>
+        <li>All characters stored uniformly in <code>GameCharacter[]</code> array</li>
+    </ul>
+    
+✦ <strong>Polymorphism</strong>
+    <ul>
+        <li><code>player.performAction()</code> calls different implementations at runtime</li>
+        <li>Elara protects, Orion hunts, Calisto investigates, Luna sabotages</li>
+        <li>Game phases execute differently through the same <code>executePhase()</code> method</li>
+    </ul>
+    
+✦ <strong>Exception Handling</strong>
+    <ul>
+        <li><code>GameUtils.safeReadInt()</code> safely handles invalid user input</li>
+        <li><code>clearScreen()</code> and <code>typeText()</code> include fallback mechanisms</li>
+        <li>Game sessions recover gracefully from unexpected errors</li>
+    </ul>
 
 ##  ִ ࣪𖤐~ How to Run the Program
 1. **Download the ZIP File** of Moonlight's Gambit from the repository.
