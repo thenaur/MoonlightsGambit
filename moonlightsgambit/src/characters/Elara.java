@@ -12,6 +12,7 @@ public class Elara extends GameCharacter {
     private static final String LORE_DESCRIPTION = "Her faith shines brighter than the moon.";
     private static final String ACTION_PROMPT = "Choose a player to protect with divine light (0 to protect yourself): ";
 
+    // Constructor
     public Elara(String name) {
         super(name, Team.GOOD);
     }
@@ -44,6 +45,7 @@ public class Elara extends GameCharacter {
         return target != null && target.isAlive();
     }
     
+    // Perform night action
     @Override
     protected void executeAction(GameCharacter target, MoonlightsGambit game) {
         target.setBlessed(true);
@@ -62,6 +64,7 @@ public class Elara extends GameCharacter {
                           getName()), TEXT_DELAY_MS);
     }
     
+    //Abstract method implementations for role details
     @Override public String getRoleDescription() { return ROLE_DESCRIPTION; }
     @Override public String getActionPrompt() { return ACTION_PROMPT; }
     @Override public String getLoreDescription() { return LORE_DESCRIPTION; }
