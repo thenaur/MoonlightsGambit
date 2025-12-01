@@ -107,7 +107,7 @@ In this game of hidden allegiances, players take on fantasy roles with unique ab
 
 1. **✦ Introduction Phase** ~ Story gets introduced, 4 players input their names, and roles are randomly assigned to each player
 2. **✦ Night Phase** ~ Players use their unique abilities in secret
-3. **✦ Dawn Phase** ~ The host reveals what happened during the night.
+3. **✦ Dawn Phase** ~ The host reveals what happened during the night
 4. **✦ Voting Phase** ~ Players debate and vote to eliminate one suspect
    
 <div align="center">☾・───────────────────────────────────────────────────────────・☽</div>
@@ -155,13 +155,6 @@ The final duel where the last two players alive draw numbers (1-10) and choose t
 ## 𓍢ִ໋🀦 ~ Project Structure
 ```
 moonlightsgambit/
-├── markdown/
-│   ├── destinydraw.gif
-│   ├── end.gif
-│   ├── intro.gif
-│   ├── roleassignment.gif
-│   ├── sampleending.gif
-│   └── skill.gif
 ├── src/
 |   ├── enums/
 │   │     └── Team.java                   – GOOD / EVIL constants
@@ -185,33 +178,6 @@ moonlightsgambit/
 │   │     └── NarrativeEnding.java        – epilogue, and special ending texts
 |   ├── MoonlightsGambit.java           – game loop, phase driver, win checks, state clean-up
 |   └── MoonlightsGambitGame.java       – main method: session loop, crash recovery, play-again
-|
-├── bin/
-|   └──moonlightsgambit/
-|      ├── enums/
-│      │     └── Team.class                   
-│      ├── interfaces/
-│      │     └── GamePhase.class             
-│      ├── characters/
-│      │     ├── GameCharacter.class         
-│      │     ├── Elara.class                  
-│      │     ├── Orion.class                  
-│      │     ├── Calisto.class               
-│      │     └── Luna.class                
-│      ├── utils/
-│      │     ├── GameUtils.class           
-│      │     └── DestinyDraw.class         
-│      ├── phases/
-│      │     ├── IntroPhase.class       
-│      │     ├── GameSetup.class           
-│      │     ├── MoonPhase.class       
-│      │     ├── DawnPhase.class              
-│      │     ├── VotingPhase.class           
-│      │     └── NarrativeEnding.class      
-|      ├── MoonlightsGambit$1.class
-|      ├── MoonlightsGambit.class  
-|      └── MoonlightsGambitGame.class
-|
 └── README.md       
 ```
 
@@ -292,7 +258,7 @@ moonlightsgambit/
 </tr>
 <tr>
     <td>Abril, Rheigne Ysabel M.</td>
-    <td>✦ <a href="https://github.com/rainrain-lili">@rainrain_lili</a></td>
+    <td>✦ <a href="https://github.com/rainrain-lili">@rainrain-lili</a></td>
 </tr>
 <tr>
     <td>Bautista, Angelica Joy G.</td>
